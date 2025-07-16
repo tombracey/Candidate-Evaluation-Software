@@ -1,5 +1,7 @@
 import os
+import json
 import pandas as pd
+from faker import Faker
 from src.GCP_utils.gemini import gemini
 
 def get_CVs():
@@ -13,16 +15,32 @@ def get_CVs():
                 CVs.append(text)
     return CVs
 
-def evaluate(pool, role):
+def evaluate(pool: list, role: str):
+    """
+    Args:
+        pool: list of CVs as strings
+        role: job title and description as a string
+    """
     data = []
     for candidate in pool:
         prompt = f"""Candidate: {candidate}
         Evaluate this candidate for a {role} role.
         Return only a Python dict as a string, formatted like: {{name: <their name>, experience: <score/100>, qualifications: <score/100>, location: location}}
-I       If location isn't stated, return the location value as None.
-        Return nothing else.
-        Do not include any other text, code blocks or formatting."""
-        data.append(gemini(prompt))
+I       Post code preferred for location where possible. If location isn't stated, return the location value as None.
+        Return nothing else."""
+        
+        raw_output = gemini(prompt)
+        # string_output = raw_output[0]
+        clean_output = raw_output.replace('```python\n', '').replace('\n```', '').strip()
+
+        try:
+            candidate_dict = json.loads(clean_output)
+            data.append(candidate_dict)
+        except json.JSONDecodeError as e:
+            print(f"Error decoding JSON")
+            print(f"Raw Gemini output: {raw_output}")
+            print(f"Cleaned string (attempted JSON parse): '{clean_output}'")
+            print(f"Error details: {e}")
     print(data)
 
 CVs = get_CVs()
