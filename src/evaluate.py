@@ -41,7 +41,9 @@ I       Post code preferred for location where possible. If location isn't state
             print(f"Raw Gemini output: {raw_output}")
             print(f"Cleaned string (attempted JSON parse): '{clean_output}'")
             print(f"Error details: {e}")
-    print(data)
+
+    df = pd.DataFrame(data)
+    df.to_markdown('./data/output/CV_evaluation.md', index=False)
 
 CVs = get_CVs()
 
