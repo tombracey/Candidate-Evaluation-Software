@@ -1,0 +1,49 @@
+**Andrew Bailey**
+WR11 5PU | 07700 900900 | andrew.bailey1995@email.com
+
+**Summary**
+
+Enthusiastic and detail-oriented graduate with some experience in data analysis and database management, looking to start a career in Data Engineering. Basic understanding of data warehousing principles and ETL processes. Eager to learn and contribute to a data-driven environment.
+
+**Education**
+
+*   **University of York** York, UK
+    *   BSc (Hons) Mathematics (2:2) September 2014 – June 2017
+
+*   **Pershore High School** Pershore, UK
+    *   A-Levels: Mathematics (B), Physics (C), Chemistry (C) September 2007 - June 2014
+
+**Experience**
+
+*   **Data Assistant, Evesham Vale Growers** Evesham, UK
+    *   *July 2017 – December 2017*
+    *   Supported the operations team by collecting and organising agricultural data.
+    *   Entered data into spreadsheets and updated the internal database.
+    *   Created basic reports using Excel to track crop yields.
+    *   Identified and reported on some potential data entry errors.
+
+*   **Warehouse Operative, Westland Horticulture** Evesham, UK
+    *   *January 2018 – Present*
+    *   Responsible for picking, packing, and shipping orders.
+    *   Maintained accurate inventory records.
+    *   Assisted in identifying and resolving logistical issues.
+    *   Developed some SQL skills by creating custom inventory reports from warehouse management system (WMS).
+
+**Skills**
+
+*   **Programming Languages:** Python (Basic), SQL (Intermediate)
+*   **Software:** Microsoft Excel (Proficient), Microsoft Access (Basic), Git (Basic), Linux (Basic)
+*   **Data Tools:** Familiar with basic ETL concepts.
+*   **Database Management:** Relational databases (SQL Server)
+*   **Other:** Data analysis, problem-solving, teamwork, communication
+
+**Projects**
+
+*   **University Project: Stock Market Analysis**
+    *   Collected and analysed historical stock market data using Python and Pandas.
+    *   Created visualizations to identify trends and patterns.
+    *   Presented findings in a written report.
+
+**Interests**
+
+*   Hiking, Reading, Playing chess.

@@ -1,0 +1,59 @@
+**Thomas Lutz**
+AL1 1DT | 07700 900123 | thomas.lutz@email.com
+
+**Summary**
+
+Highly motivated and analytical recent graduate with a BSc in Computer Science and a strong foundation in data warehousing, ETL processes, and database management. Eager to contribute to a data-driven organisation and leverage technical skills to build and maintain efficient and scalable data pipelines. Proven ability to learn quickly, work collaboratively, and deliver high-quality results in fast-paced environments. Seeking a Junior Data Engineer role where I can apply and expand my data engineering skills.
+
+**Education**
+
+*   **University of Central Lancashire, Preston** BSc (Hons) Computer Science | 2020 – 2023
+    *   Relevant modules: Data Warehousing, Database Systems, Data Structures and Algorithms, Software Engineering, Cloud Computing
+    *   Dissertation: *Automated Data Pipeline for Real-Time Sentiment Analysis of Social Media Data* (Grade: First Class)
+*   **Beaumont School, St Albans** A-Levels | 2018 – 2020
+    *   Mathematics (A*), Computer Science (A), Physics (B)
+    *   GCSEs: 9 GCSEs at grades A*-C including Maths, English and Science
+
+**Technical Skills**
+
+*   **Programming Languages:** Python (Pandas, NumPy, Scikit-learn), SQL, Java
+*   **Databases:** PostgreSQL, MySQL, MongoDB
+*   **Cloud Technologies:** AWS (S3, EC2, Lambda), Azure (basic familiarity)
+*   **ETL Tools:** Apache Airflow (basic), Informatica PowerCenter (exposure)
+*   **Operating Systems:** Windows, Linux, macOS
+*   **Version Control:** Git, GitHub
+*   **Data Visualisation:** Tableau, Power BI
+
+**Experience**
+
+*   **Data Engineering Intern | Quantify Solutions, Hemel Hempstead** | June 2022 – August 2022
+    *   Assisted in the development and maintenance of ETL pipelines for processing large datasets from various sources, including relational databases and APIs.
+    *   Wrote SQL queries to extract, transform, and load data into the data warehouse.
+    *   Implemented data quality checks and monitoring processes to ensure data accuracy and consistency.
+    *   Contributed to the documentation of data pipelines and data models.
+    *   Worked with team members to resolve and debug data pipeline issues.
+*   **IT Support Assistant | Beaumont School, St Albans** | September 2019 – June 2020 (Part-time)
+    *   Provided technical support to students and staff, troubleshooting hardware and software issues.
+    *   Assisted in the maintenance of the school's IT infrastructure, including network devices and servers.
+    *   Installed and configured software applications on student and staff computers.
+
+**Projects**
+
+*   **E-commerce Sales Dashboard (Personal Project)**
+    *   Developed a data dashboard using Tableau to visualise e-commerce sales data.
+    *   Extracted data from a simulated e-commerce database using SQL queries.
+    *   Implemented calculated fields to derive key performance indicators (KPIs), such as revenue, profit margin, and customer lifetime value.
+    *   Designed interactive dashboards to allow users to explore sales data by product category, region, and time period.
+*   **Sentiment Analysis Tool (University Project)**
+    *   Developed a Python-based sentiment analysis tool that analyses text data from social media feeds.
+    *   Utilized Natural Language Processing (NLP) techniques to identify and classify the sentiment of text messages.
+    *   Integrated the tool with a REST API to allow users to submit text data for analysis.
+
+**Awards and Certifications**
+
+*   Dean's List, University of Central Lancashire (2021, 2022)
+*   Microsoft Certified Azure Fundamentals (AZ-900) (Completed Online Course)
+
+**References**
+
+Available upon request.

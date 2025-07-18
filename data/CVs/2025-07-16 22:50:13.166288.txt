@@ -1,0 +1,79 @@
+**David Young**
+LE11 0PL | 07700 900123 | david.young.data@email.com
+
+**Summary**
+
+A highly motivated and analytical recent graduate with a BSc in Computer Science from the University of Nottingham and a proven passion for data engineering. Eager to contribute to a data-driven environment, leveraging strong programming skills in Python and SQL, coupled with hands-on experience in data manipulation, ETL processes, and cloud technologies. Seeking a Junior Data Engineer position where I can further develop my skills and contribute to building robust and scalable data pipelines.
+
+**Education**
+
+*   **University of Nottingham, Nottingham, UK**
+    *   BSc (Hons) Computer Science | September 2020 – June 2023
+        *   First Class Honours
+        *   Dissertation: "Developing a Scalable Data Pipeline for Real-Time Sentiment Analysis of Social Media Data Using Apache Kafka and Spark Streaming." (Achieved 85%)
+        *   Relevant Coursework: Data Structures and Algorithms, Database Systems, Cloud Computing, Machine Learning, Software Engineering, Data Mining, Big Data Analytics.
+
+*   **Loughborough Grammar School, Loughborough, UK**
+    *   A-Levels: Mathematics (A*), Further Mathematics (A), Physics (A), Computer Science (B)
+    *   GCSEs: 9 GCSEs at Grade A/7 or above including Mathematics (9), English Language (8), and Science (8, 8).
+
+**Skills**
+
+*   **Programming Languages:** Python (Pandas, NumPy, Scikit-learn, PySpark), SQL, Java (Basic)
+*   **Databases:** SQL Server, PostgreSQL, MySQL, MongoDB (Basic)
+*   **Cloud Technologies:** AWS (S3, EC2, Lambda, IAM, CloudWatch), Azure (Azure Data Factory - ADF, Azure Blob Storage, Azure Functions)
+*   **Data Engineering Tools:** Apache Spark, Apache Kafka, Apache Airflow, Docker, Git
+*   **Operating Systems:** Windows, Linux (Ubuntu), macOS
+*   **Data Visualization:** Tableau, Power BI
+*   **ETL Processes:** Experience in designing, developing, and implementing ETL pipelines.
+*   **Data Warehousing Concepts:** Understanding of dimensional modeling and data warehouse architecture.
+*   **Data Analysis:** Proficient in performing data analysis and cleaning using Python and SQL.
+*   **Version Control:** Git and GitHub
+*   **Agile Methodologies:** Familiar with Agile development principles and practices.
+
+**Projects**
+
+*   **Real-Time Stock Market Data Pipeline (Personal Project) | June 2023 - August 2023**
+    *   Developed a real-time data pipeline to collect stock market data from a public API, process it using Apache Kafka and Spark Streaming, and store it in a PostgreSQL database.
+    *   Utilized AWS services (EC2, S3) for hosting and data storage.
+    *   Implemented data visualization dashboards using Tableau to track key performance indicators.
+    *   Demonstrated proficiency in building end-to-end data pipelines and working with real-time data streams.
+
+*   **Customer Churn Prediction Model (University Project) | January 2023 - April 2023**
+    *   Developed a machine learning model to predict customer churn for a telecommunications company.
+    *   Collected and preprocessed customer data using Pandas and NumPy.
+    *   Implemented various machine learning algorithms (Logistic Regression, Random Forest) using Scikit-learn.
+    *   Evaluated model performance using metrics such as accuracy, precision, and recall.
+    *   Presented findings and recommendations to stakeholders.
+
+*   **E-commerce Data Analysis (University Project) | September 2022 - December 2022**
+    *   Analyzed a large dataset of e-commerce transactions to identify key trends and patterns.
+    *   Utilized SQL to extract and transform data from a relational database.
+    *   Developed data visualizations using Power BI to communicate insights to business users.
+    *   Identified opportunities to improve marketing campaigns and increase sales.
+
+**Experience**
+
+*   **Data Engineering Intern | DataStream Analytics Ltd, Nottingham | June 2022 – August 2022**
+    *   Assisted in the development of ETL pipelines using Apache Airflow and Python to ingest and process data from various sources.
+    *   Contributed to the design and implementation of a data warehouse solution using Snowflake.
+    *   Monitored and maintained data pipelines to ensure data quality and reliability.
+    *   Worked with senior engineers to troubleshoot data-related issues and optimize performance.
+    *   Gained experience in working in a fast-paced data engineering environment.
+
+*   **IT Support Assistant | University of Nottingham IT Services | September 2021 – June 2022 (Part-time)**
+    *   Provided technical support to students and staff on a wide range of IT issues.
+    *   Troubleshooting hardware and software problems.
+    *   Assisted in the installation and configuration of computer systems.
+    *   Contributed to the maintenance of the university's IT infrastructure.
+    *   Developed strong problem-solving and communication skills.
+
+**Awards & Achievements**
+
+*   Dean's List, University of Nottingham (2021, 2022, 2023)
+*   University of Nottingham Computer Science Department Scholarship (2020-2023)
+*   HackNotts Hackathon - Second Place (2022) - Project focused on using Machine Learning to predict energy consumption.
+
+**References**
+
+Available upon request.
