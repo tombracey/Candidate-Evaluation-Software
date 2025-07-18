@@ -1,7 +1,6 @@
 import os
 import json
 import pandas as pd
-from faker import Faker
 from src.GCP_utils.gemini import gemini
 
 def get_CVs():

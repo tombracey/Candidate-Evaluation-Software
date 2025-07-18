@@ -29,4 +29,4 @@ def generate_mock_CVs(num=1, role=None):
         with open(save_path, 'w') as f:
             f.write(CV)
 
-generate_mock_CVs(3, "Junior Data Engineer")
+generate_mock_CVs(4, "Junior Data Engineer")
