@@ -2,16 +2,21 @@ import os
 import json
 import pandas as pd
 from src.GCP_utils.gemini import gemini
+from src.utils import pdf_to_text
 
 def get_CVs():
+    # for testing purposes
     CVs_path = './data/CVs'
     CVs = []
 
     for filename in os.listdir(CVs_path):
             filepath = os.path.join(CVs_path, filename)
-            with open(filepath, 'r', encoding='utf-8') as file:
-                text = file.read()
-                CVs.append(text)
+            if filename.lower().endswith('pdf'):
+                 text = pdf_to_text(filepath)
+            else:
+                with open(filepath, 'r', encoding='utf-8') as file:
+                    text = file.read()
+            CVs.append(text)
     return CVs
 
 def evaluate(pool: list, role: str):
