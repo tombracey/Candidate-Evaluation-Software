@@ -19,7 +19,7 @@ def get_CVs():
             CVs.append(text)
     return CVs
 
-def evaluate(pool: list, role: str):
+def evaluate(pool: list, role: str, location=True):
     """
     Args:
         pool: list of CVs as strings
@@ -29,12 +29,17 @@ def evaluate(pool: list, role: str):
     for candidate in pool:
         prompt = f"""Candidate: {candidate}
         Evaluate this candidate for a {role} role.
-        Return only a Python dict as a string, formatted like: {{name: <their name>, experience: <score/100>, qualifications: <score/100>, location: location}}
-I       Post code preferred for location where possible. If location isn't stated, return the location value as None.
-        Return nothing else."""
+        Return only a Python dict as a string, formatted like: """
+        
+        if location:
+             prompt += """{{name: <their name>, experience: <score/100>, qualifications: <score/100>, location: location}}
+I       Post code preferred for location where possible. If location isn't stated, return the location value as None."""
+        else:
+             prompt += "{{name: <their name>, experience: <score/100>, qualifications: <score/100>}}"
+        
+        prompt += "Return nothing else."
         
         raw_output = gemini(prompt)
-        # string_output = raw_output[0]
         clean_output = raw_output.replace('```python\n', '').replace('\n```', '').strip()
 
         try:
