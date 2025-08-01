@@ -49,18 +49,24 @@ def evaluate(pool: list, role: str, location=True):
 
         prompt = f"""Candidate: "{candidate}"
         Evaluate this candidate for a {role} role.
-        Return only a Python dict as a string, formatted like: """
+        Return only a JSON object, formatted like: """
         
         if location:
-             prompt += """{{name: <their name>, experience: <score/100>, qualifications: <score/100>, location: location}}
-I       Post code preferred for location where possible. If location isn't stated, return the location value as None."""
+            prompt += """{"name": "<their name>", "experience": <score/100>, "qualifications": <score/100>, "location": "<postcode or city>"}
+            If location isn't stated, use null for the location value."""
         else:
-             prompt += "{{name: <their name>, experience: <score/100>, qualifications: <score/100>}}"
-        
-        prompt += "Return nothing else."
+            prompt += """ {"name": "<their name>", "experience": <score/100>, "qualifications": <score/100>}"""
+
+        prompt += "\nAll values must be valid JSON. Use null instead of None. Return only JSON, no extra text."
         
         raw_output = gemini(prompt)
-        clean_output = raw_output.replace('```python\n', '').replace('\n```', '').strip()
+        clean_output = (
+            raw_output
+            .replace('```json', '')
+            .replace('```python', '')
+            .replace('```', '')
+            .strip()
+        )
 
         try:
             candidate_dict = json.loads(clean_output)
@@ -75,6 +81,5 @@ I       Post code preferred for location where possible. If location isn't state
     df.to_markdown('./data/output/CV_evaluation.md', index=False)
 
 CVs = get_CV_paths()
-print(CVs)
 
 evaluate(CVs, "junior data engineer")
