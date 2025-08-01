@@ -1,0 +1,66 @@
+**Veronica Ramirez**
+EH4 3HY | 07700 900123 | veronica.ramirez@email.com
+
+**Summary**
+
+Highly motivated and analytical recent graduate with a BSc in Computer Science from the University of Abertay Dundee and a strong foundation in data manipulation, database management, and programming. Eager to apply theoretical knowledge and practical skills gained through academic projects and professional experience to contribute to a dynamic and innovative data engineering team. Possesses a proactive approach, excellent problem-solving abilities, and a passion for leveraging data to drive informed business decisions. Seeking a Junior Data Engineer role where I can learn and grow within a challenging environment.
+
+**Education**
+
+*   **University of Abertay Dundee, Dundee** | BSc (Hons) Computer Science | 2020 - 2023
+    *   First Class Honours
+    *   Dissertation: "Developing a Scalable Data Pipeline for Real-Time Sentiment Analysis of Social Media Data" - Explored the use of Apache Kafka, Apache Spark Streaming, and NoSQL databases (MongoDB) to process and analyze large volumes of Twitter data, achieving 92% accuracy in sentiment classification.
+    *   Relevant Coursework: Data Structures and Algorithms, Database Management Systems, Software Engineering, Data Mining, Machine Learning, Distributed Systems, Cloud Computing, Big Data Analytics.
+
+*   **Boroughmuir High School, Edinburgh** | 2014 - 2020
+    *   A-Levels: Mathematics (A*), Physics (A), Computing (A), Further Mathematics (B)
+
+**Skills**
+
+*   **Programming Languages:** Python (Proficient), SQL (Proficient), Java (Intermediate), R (Basic)
+*   **Databases:** SQL Server, PostgreSQL, MySQL, MongoDB (NoSQL), Cassandra
+*   **Data Warehousing:** Snowflake, AWS Redshift
+*   **ETL Tools:** Apache NiFi, Apache Airflow, Informatica PowerCenter (Exposure)
+*   **Cloud Technologies:** AWS (S3, EC2, Lambda, IAM), Azure (Basic)
+*   **Big Data Technologies:** Apache Spark, Apache Hadoop, Apache Kafka
+*   **Operating Systems:** Windows, Linux, macOS
+*   **Version Control:** Git (GitHub, GitLab, Bitbucket)
+*   **Data Visualisation:** Tableau, Power BI, Matplotlib, Seaborn
+*   **Statistical Analysis:** Regression, Hypothesis Testing
+*   **Agile Methodologies:** Scrum, Kanban
+
+**Experience**
+
+*   **Data Analytics Intern | DataWise Solutions, Edinburgh** | June 2022 - August 2022
+    *   Developed and maintained SQL scripts for data extraction, transformation, and loading (ETL) processes, resulting in a 20% reduction in data processing time.
+    *   Collaborated with senior data analysts to identify and resolve data quality issues, improving the accuracy of business intelligence reports.
+    *   Created interactive dashboards using Tableau to visualize key performance indicators (KPIs) and support data-driven decision-making.
+    *   Assisted in the migration of on-premise databases to AWS cloud infrastructure, contributing to improved scalability and cost efficiency.
+    *   Gained experience in using Python and Pandas to clean and pre-process large datasets for analysis.
+
+*   **IT Support Assistant | University of Abertay Dundee IT Department** | September 2021 - May 2022
+    *   Provided technical support to students and faculty members, resolving hardware and software issues.
+    *   Maintained and updated computer systems, ensuring optimal performance and security.
+    *   Documented troubleshooting procedures and solutions for future reference.
+
+**Projects**
+
+*   **Customer Churn Prediction using Machine Learning (Python, Scikit-learn)**
+    *   Developed a machine learning model to predict customer churn for a telecommunications company, achieving an accuracy of 85%.
+    *   Utilized various machine learning algorithms, including logistic regression, support vector machines, and random forests.
+    *   Performed feature engineering and selection to optimize model performance.
+    *   Presented findings and recommendations to stakeholders, demonstrating the potential for improved customer retention strategies.
+
+*   **E-commerce Sales Analysis and Dashboard (SQL, Tableau)**
+    *   Analyzed e-commerce sales data using SQL to identify trends, patterns, and anomalies.
+    *   Designed and implemented an interactive Tableau dashboard to visualize key sales metrics, such as revenue, customer demographics, and product performance.
+    *   Identified areas for improvement in sales strategies and marketing campaigns.
+
+**Awards and Recognition**
+
+*   Dean's List, University of Abertay Dundee | 2021, 2022, 2023
+*   University of Abertay Dundee Computing Society - President | 2022-2023
+
+**References**
+
+Available upon request.
