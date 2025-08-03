@@ -29,57 +29,79 @@ def get_CV_paths():
 
     for filename in os.listdir(CVs_path):
             filepath = os.path.join(CVs_path, filename)
-            # if filename.lower().endswith('pdf'):
-            #      text = pdf_to_text(filepath)
-            # else:
-            #     with open(filepath, 'r', encoding='utf-8') as file:
-            #         text = file.read()
             CVs.append(filepath)
     return CVs
 
-def evaluate(pool: list, role: str, location=True):
+def evaluate_batch(pool: list, role: str, location=True):
     """
-    Args:
-        pool: list of CVs as strings
-        role: job title and description as a string
+    
     """
-    data = []
+    pool_text = []
     for candidate in pool:
         candidate = convert_to_text(candidate)
+        pool_text.append(candidate)
 
-        prompt = f"""Candidate: "{candidate}"
-        Evaluate this candidate for a {role} role.
-        Return only a JSON object, formatted like: """
-        
-        if location:
-            prompt += """{"name": "<their name>", "experience": <score/100>, "qualifications": <score/100>, "location": "<postcode or city>"}
+    candidates_block = "'\n\n'".join(pool_text)
+
+    prompt = f"""
+    Evaluate the followiong {len(pool)} candidates for a {role} role.
+    
+    {candidates_block}
+
+    Return only a JSON object, formatted like: """
+    
+    if location:
+        prompt += """[
+            {
+                "name": "Tom Bracey",
+                "experience": 90,
+                "qualifications": 90,
+                "location": "Ealing"
+            },
+            {
+                "name": "John Doe",
+                "experience": 80,
+                "qualifications": 85,
+                "location": null
+            }
+            ]
             If location isn't stated, use null for the location value."""
-        else:
-            prompt += """ {"name": "<their name>", "experience": <score/100>, "qualifications": <score/100>}"""
+    else:
+        prompt += """[
+            {
+                "name": "Tom Bracey",
+                "experience": 90,
+                "qualifications": 90
+            },
+            {
+                "name": "John Doe",
+                "experience": 80,
+                "qualifications": 85            }
+            ]
+        """
 
-        prompt += "\nAll values must be valid JSON. Use null instead of None. Return only JSON, no extra text."
-        
-        raw_output = gemini(prompt)
-        clean_output = (
-            raw_output
-            .replace('```json', '')
-            .replace('```python', '')
-            .replace('```', '')
-            .strip()
-        )
+    prompt += "\nAll values must be valid JSON. Use null instead of None. Return only JSON, no extra text."
+    
+    raw_output = gemini(prompt)
+    clean_output = (
+        raw_output
+        .replace('```json', '')
+        .replace('```python', '')
+        .replace('```', '')
+        .strip()
+    )
 
-        try:
-            candidate_dict = json.loads(clean_output)
-            data.append(candidate_dict)
-        except json.JSONDecodeError as e:
-            print(f"Error decoding JSON")
-            print(f"Raw Gemini output: {raw_output}")
-            print(f"Cleaned string (attempted JSON parse): '{clean_output}'")
-            print(f"Error details: {e}")
+    try:
+        evaluations = json.loads(clean_output)
+    except json.JSONDecodeError as e:
+        print(f"Error decoding JSON")
+        print(f"Raw Gemini output: {raw_output}")
+        print(f"Cleaned string (attempted JSON parse): '{clean_output}'")
+        print(f"Error details: {e}")
 
-    df = pd.DataFrame(data)
-    df.to_markdown('./data/output/CV_evaluation.md', index=False)
+    df = pd.DataFrame(evaluations)
+    df.to_markdown('./data/output/CV_evaluation_5.md', index=False)
 
 CVs = get_CV_paths()
 
-evaluate(CVs, "junior data engineer")
+evaluate_batch(CVs, "junior data engineer")
