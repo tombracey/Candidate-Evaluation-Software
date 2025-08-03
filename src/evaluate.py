@@ -7,6 +7,9 @@ from src.conversions.word import word_to_text
 from src.conversions.image import image_to_text
 
 def convert_to_text(path):
+    """
+    Used to convert CVs to text before parsing into Gemini
+    """
     path_lower = path.lower()
     if path_lower.endswith('.pdf'):
         return pdf_to_text(path)
@@ -22,6 +25,7 @@ def convert_to_text(path):
     else:
         print("Could not parse file type")
 
+
 def get_CV_paths():
     # for testing purposes
     CVs_path = './data/CVs'
@@ -32,19 +36,20 @@ def get_CV_paths():
             CVs.append(filepath)
     return CVs
 
+
 def evaluate_batch(pool: list, role: str, location=True):
-    """
-    
-    """
+    """Evaluates a batch of up to 10 CVs with a single Gemini request"""
     pool_text = []
     for candidate in pool:
         candidate = convert_to_text(candidate)
         pool_text.append(candidate)
 
-    candidates_block = "'\n\n'".join(pool_text)
+    candidates_block = "\n\n".join(
+        [f"CANDIDATE {i+1}:\n{txt}" for i, txt in enumerate(pool_text)]
+    )
 
     prompt = f"""
-    Evaluate the followiong {len(pool)} candidates for a {role} role.
+    Evaluate the following {len(pool)} candidates for a {role} role.
     
     {candidates_block}
 
@@ -56,7 +61,7 @@ def evaluate_batch(pool: list, role: str, location=True):
                 "name": "Tom Bracey",
                 "experience": 90,
                 "qualifications": 90,
-                "location": "Ealing"
+                "location": "W7 1HP"
             },
             {
                 "name": "John Doe",
@@ -65,7 +70,8 @@ def evaluate_batch(pool: list, role: str, location=True):
                 "location": null
             }
             ]
-            If location isn't stated, use null for the location value."""
+            Post codes are preferred, but return any location value given.
+            If location isn't stated, use null."""
     else:
         prompt += """[
             {
@@ -80,7 +86,7 @@ def evaluate_batch(pool: list, role: str, location=True):
             ]
         """
 
-    prompt += "\nAll values must be valid JSON. Use null instead of None. Return only JSON, no extra text."
+    prompt += "\nAll values must be valid JSON, return no extra text."
     
     raw_output = gemini(prompt)
     clean_output = (
@@ -100,8 +106,27 @@ def evaluate_batch(pool: list, role: str, location=True):
         print(f"Error details: {e}")
 
     df = pd.DataFrame(evaluations)
-    df.to_markdown('./data/output/CV_evaluation_5.md', index=False)
+    return df
+
+
+def evaluate_all_CVs(pool: list, role: str, location=True):
+    """
+    Splits CVs into batches and evaluates each batch.
+    Aggregates results into one dataframe.
+    """
+    all_results = []
+
+    for i in range(0, len(pool), 10):
+        batch = pool[i:i+10]
+
+        results_df = evaluate_batch(batch, role, location)
+        if results_df is not None:
+            all_results.append(results_df)
+
+    final_df = pd.concat(all_results, ignore_index=True)
+    final_df.to_markdown('./data/output/CV_evaluation.md', index=False)
+    return final_df
 
 CVs = get_CV_paths()
 
-evaluate_batch(CVs, "junior data engineer")
+evaluate_all_CVs(CVs, "junior data engineer")
