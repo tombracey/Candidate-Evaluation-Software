@@ -92,7 +92,6 @@ def evaluate_batch(pool: list, role: str, location=True):
     clean_output = (
         raw_output
         .replace('```json', '')
-        .replace('```python', '')
         .replace('```', '')
         .strip()
     )
@@ -124,6 +123,8 @@ def evaluate_all_CVs(pool: list, role: str, location=True):
             all_results.append(results_df)
 
     final_df = pd.concat(all_results, ignore_index=True)
+    final_df["Overall Suitability"] = ((final_df["experience"] + final_df["qualifications"]) / 2).round(0).astype(int)
+    final_df = final_df.sort_values(by="Overall Suitability", ascending=False)
     final_df.to_markdown('./data/output/CV_evaluation.md', index=False)
     return final_df
 
