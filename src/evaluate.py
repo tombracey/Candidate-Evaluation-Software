@@ -5,6 +5,7 @@ from src.GCP_utils.gemini import gemini
 from src.conversions.pdf import pdf_to_text
 from src.conversions.word import word_to_text
 from src.conversions.image import image_to_text
+from src.conversions.odt import convert_odf_to_text
 
 def convert_to_text(path):
     """
@@ -19,7 +20,7 @@ def convert_to_text(path):
         with open(path, 'r', encoding='utf-8') as f:
             return f.read()
     elif path_lower.endswith('.odt'):
-        pass
+        return convert_odf_to_text(path)
     elif path_lower.endswith('.jpg') or path_lower.endswith('.png'):
         return image_to_text(path)
     else:
