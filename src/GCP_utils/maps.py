@@ -38,4 +38,4 @@ def get_distance_or_duration(origin: str, destination: str, mode: str = "transit
     if info_type == "distance":
         return f"{round(element["distance"]["value"]/1000)} km"
     elif info_type == "duration":
-        return f"{round(element["duration"]["value"]/60)} mins"
+        return round(element["duration"]["value"]/60)
