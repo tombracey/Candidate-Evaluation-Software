@@ -23,10 +23,12 @@ def generate_candidates(num):
 
     with open('data/mock_candidates.csv', 'w', newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(['Name', 'Postcode', 'Experience/100', 'Qualifications/100'])
+        writer.writerow(['Name', 'Postcode', 'Experience', 'Qualifications'])
         writer.writerows(candidates)
 
 def generate_employer():
     employer_name = fake.company()
     employer_postcode = get_postcodes(1)[0]
     return employer_name, employer_postcode
+
+# generate_candidates(300)
