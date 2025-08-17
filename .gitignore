@@ -2,3 +2,4 @@ venv
 .env
 dev_notes.txt
 __pycache__/
+node_modules/
