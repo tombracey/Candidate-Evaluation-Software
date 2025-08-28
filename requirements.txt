@@ -9,3 +9,5 @@ pdf2image
 python-docx
 python-dotenv
 odfdo
+fastapi
+uvicorn
