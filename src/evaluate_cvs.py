@@ -111,24 +111,21 @@ def evaluate_batch(pool: list, role: str, location=True):
 
 def evaluate_all_CVs(pool: list, role: str, location=True):
     """
-    Splits CVs into batches and evaluates each batch.
-    Aggregates results into one dataframe.
+    Splits CVs into batches, evaluates them and aggregates the results.
+    Returns results as a JSON string.
     """
     all_results = []
 
     for i in range(0, len(pool), 10):
         batch = pool[i:i+10]
 
-        results_df = evaluate_batch(batch, role, location)
-        if results_df is not None:
-            all_results.append(results_df)
+        batch_results = evaluate_batch(batch, role, location)
+        if batch_results is not None:
+            all_results.append(batch_results)
 
-    final_df = pd.concat(all_results, ignore_index=True)
-    final_df["Overall Suitability"] = ((final_df["experience"] + final_df["qualifications"]) / 2).round(0).astype(int)
-    final_df = final_df.sort_values(by="Overall Suitability", ascending=False)
-    final_df.to_markdown('./data/output/CV_evaluation.md', index=False)
-    return final_df
-
-CVs = get_CV_paths()
-
-evaluate_all_CVs(CVs, "junior data engineer")
+    aggregated_results = pd.concat(all_results, ignore_index=True)
+    aggregated_results["Overall Suitability"] = ((aggregated_results["experience"] + aggregated_results["qualifications"]) / 2).round(0).astype(int)
+    aggregated_results = aggregated_results.sort_values(by="Overall Suitability", ascending=False)
+    aggregated_results.to_markdown('./data/output/CV_evaluation.md', index=False)
+    result_json = aggregated_results.to_json(orient='records', indent=4)
+    return result_json

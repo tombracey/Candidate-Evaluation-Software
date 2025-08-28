@@ -60,6 +60,7 @@ def evaluate_table(path, find_travel_time=False, travel_weight=0.35, employer_ad
         df = df.sort_values(by='Overall Score', ascending=False)
         
     df.to_markdown('./data/output/spreadsheet_evaluation.md', index=False)
-    return df
+    return df.to_json(orient='records', indent=4)
 
-evaluate_table('./data/mock_candidates.csv', True, employer_address='10 Downing Street', Experience=1, Qualifications=1)
+
+# evaluate_table('./data/mock_candidates.csv', True, employer_address='10 Downing Street', Experience=1, Qualifications=1)
