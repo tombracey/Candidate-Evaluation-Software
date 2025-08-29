@@ -1,12 +1,26 @@
 const { app, BrowserWindow } = require("electron");
+const path = require("path");
 
-function createWindow() {
-  const win = new BrowserWindow({
-    width: 800,
-    height: 600
+let mainWindow;
+
+app.on("ready", () => {
+  mainWindow = new BrowserWindow({
+    webPreferences: {
+      nodeIntegration: false,
+      contextIsolation: true,
+    },
   });
 
-  win.loadURL("http://localhost:3000");
-}
+  mainWindow.loadURL("http://localhost:3000");
+  // Uncomment for production:
+  // mainWindow.loadFile(path.join(__dirname, "react-app/build/index.html"));
 
-app.whenReady().then(createWindow);
+  // Open DevTools for debugging (optional)
+  mainWindow.webContents.openDevTools();
+});
+
+app.on("window-all-closed", () => {
+  if (process.platform !== "darwin") {
+    app.quit();
+  }
+});
