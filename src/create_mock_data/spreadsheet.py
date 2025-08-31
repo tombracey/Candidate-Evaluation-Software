@@ -31,4 +31,4 @@ def generate_employer():
     employer_postcode = get_postcodes(1)[0]
     return employer_name, employer_postcode
 
-# generate_candidates(300)
+generate_candidates(30)

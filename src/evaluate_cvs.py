@@ -1,7 +1,8 @@
 import os
 import json
+import math
 import pandas as pd
-from src.GCP_utils.gemini import gemini
+from src.GCP_utils.gemini import gemini, log_gemini_usage
 from src.conversions.pdf import pdf_to_text
 from src.conversions.word import word_to_text
 from src.conversions.image import image_to_text
@@ -114,6 +115,9 @@ def evaluate_all_CVs(pool: list, role: str, location=True):
     Splits CVs into batches, evaluates them and aggregates the results.
     Returns results as a JSON string.
     """
+    num_of_requests = math.ceil(len(pool)/ 10)
+    log_gemini_usage(num_of_requests)
+
     all_results = []
 
     for i in range(0, len(pool), 10):
@@ -123,9 +127,9 @@ def evaluate_all_CVs(pool: list, role: str, location=True):
         if batch_results is not None:
             all_results.append(batch_results)
 
-    aggregated_results = pd.concat(all_results, ignore_index=True)
-    aggregated_results["Overall Suitability"] = ((aggregated_results["experience"] + aggregated_results["qualifications"]) / 2).round(0).astype(int)
-    aggregated_results = aggregated_results.sort_values(by="Overall Suitability", ascending=False)
-    aggregated_results.to_markdown('./data/output/CV_evaluation.md', index=False)
-    result_json = aggregated_results.to_json(orient='records', indent=4)
+    results_df = pd.concat(all_results, ignore_index=True)
+    results_df["Overall Suitability"] = ((results_df["experience"] + results_df["qualifications"]) / 2).round(0).astype(int)
+    results_df = results_df.sort_values(by="Overall Suitability", ascending=False)
+    results_df.to_markdown('./data/output/CV_evaluation.md', index=False)
+    result_json = results_df.to_json(orient='records', indent=4)
     return result_json

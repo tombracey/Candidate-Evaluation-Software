@@ -1,7 +1,26 @@
 import requests
 import os
-from datetime import datetime, timedelta, time
+import json
+from datetime import datetime, timedelta, time, date
 from dotenv import load_dotenv
+
+def log_google_maps_usage(num_requests):
+    """Logs each Maps API call into the JSON file, grouped by day"""
+    
+    maps_usage = os.path.join(".", "data", "maps_usage.json")
+    
+    with open(maps_usage, "r") as f:
+        try:
+            usage_data = json.load(f)
+        except:
+            usage_data = {}
+
+    today = str(date.today())
+    usage_data[today] = usage_data.get(today, 0) + num_requests
+
+    with open(maps_usage, "w") as f:
+        json.dump(usage_data, f, indent=2)
+
 
 def get_distance_or_duration(origin: str, destination: str, mode: str = "transit", info_type: str = "duration"):
     """

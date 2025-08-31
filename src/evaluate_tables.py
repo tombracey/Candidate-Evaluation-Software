@@ -1,5 +1,5 @@
 import pandas as pd
-from src.GCP_utils.maps import get_distance_or_duration
+from src.GCP_utils.maps import get_distance_or_duration, log_google_maps_usage
 
 def convert_to_df(path):
     if path.endswith('.csv'):
@@ -32,12 +32,15 @@ def evaluate_table(path, find_travel_time=False, travel_weight=0.35, employer_ad
             raise ValueError("Please specify the address column.")
 
         travel_times = []
+        requests = 0
         for candidate_address in df[candidate_address_column]:
+            requests += 1
             try:
                 travel_time = get_distance_or_duration(candidate_address, employer_address)
                 travel_times.append(travel_time)
             except:
                 travel_times.append(None)
+        log_google_maps_usage(requests)
 
         df['Travel Time (mins)'] = travel_times
         df = df.sort_values(by='Travel Time (mins)')
@@ -63,4 +66,4 @@ def evaluate_table(path, find_travel_time=False, travel_weight=0.35, employer_ad
     return df.to_json(orient='records', indent=4)
 
 
-# evaluate_table('./data/mock_candidates.csv', True, employer_address='10 Downing Street', Experience=1, Qualifications=1)
+evaluate_table('./data/mock_candidates.csv', True, employer_address='10 Downing Street', Experience=1, Qualifications=1)
