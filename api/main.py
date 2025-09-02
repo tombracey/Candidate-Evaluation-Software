@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from src.evaluate_tables import evaluate_table
 from src.evaluate_cvs import evaluate_all_CVs
 from fastapi.middleware.cors import CORSMiddleware
+from typing import List, Optional
 
 app = FastAPI()
 
@@ -10,15 +11,16 @@ app = FastAPI()
 class EvaluateTableRequest(BaseModel):
     path: str
     find_travel_time: bool = False
-    travel_weight: float = 0.35
-    employer_address: str
-    candidate_address_column: str = None
-    metrics: dict = None
+    travel_weight: Optional[float] = 0.35
+    employer_address: Optional[str]
+    candidate_address_column: Optional[str] = None
+    metrics: Optional[dict] = None
 
 class EvaluateAllCVsRequest(BaseModel):
-    pool: list
+    pool: List[str]
     role: str
-    location: str = None
+    location: Optional[str] = None
+    description: Optional[str] = None
 
 # Endpoints
 @app.post("/evaluate_table/")
@@ -42,7 +44,8 @@ async def evaluate_all_CVs_endpoint(request: EvaluateAllCVsRequest):
         result = evaluate_all_CVs(
             pool=request.pool,
             role=request.role,
-            location=request.location
+            location=request.location,
+            description=request.description
         )
         return {"ok": True, "data": result}
     except Exception as e:

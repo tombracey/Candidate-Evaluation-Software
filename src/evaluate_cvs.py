@@ -39,7 +39,7 @@ def get_CV_paths():
     return CVs
 
 
-def evaluate_batch(pool: list, role: str, location=True):
+def evaluate_batch(pool: list, role: str, location: bool=True, description: str=None):
     """Evaluates a batch of up to 10 CVs with a single Gemini request"""
     pool_text = []
     for candidate in pool:
@@ -47,12 +47,15 @@ def evaluate_batch(pool: list, role: str, location=True):
         pool_text.append(candidate)
 
     candidates_block = "\n\n".join(
-        [f"CANDIDATE {i+1}:\n{txt}" for i, txt in enumerate(pool_text)]
+        [f"CANDIDATE {i+1}:\n{txt}\n" for i, txt in enumerate(pool_text)]
     )
 
-    prompt = f"""
-    Evaluate the following {len(pool)} candidates for a {role} role.
+    prompt = f"Evaluate the following {len(pool)} candidates for a {role} role."
     
+    if description:
+        prompt += f" Job Description: {description}."
+
+    prompt +=f"""    
     {candidates_block}
 
     Return only a JSON object, formatted like: """
@@ -60,16 +63,16 @@ def evaluate_batch(pool: list, role: str, location=True):
     if location:
         prompt += """[
             {
-                "name": "Tom Bracey",
-                "experience": 90,
-                "qualifications": 90,
-                "location": "W7 1HP"
+                "Name": "Jane Doe",
+                "Experience": 85,
+                "Qualifications": 75,
+                "Location": "W7 1HP"
             },
             {
-                "name": "John Doe",
-                "experience": 80,
-                "qualifications": 85,
-                "location": null
+                "Name": "John Doe",
+                "Experience": 40,
+                "Qualifications": 45,
+                "Location": null
             }
             ]
             Post codes are preferred, but return any location value given.
@@ -77,14 +80,14 @@ def evaluate_batch(pool: list, role: str, location=True):
     else:
         prompt += """[
             {
-                "name": "Tom Bracey",
-                "experience": 90,
-                "qualifications": 90
+                "Name": "Jane Doe",
+                "Experience": 85,
+                "Qualifications": 75
             },
             {
-                "name": "John Doe",
-                "experience": 80,
-                "qualifications": 85            }
+                "Name": "John Doe",
+                "Experience": 40,
+                "Qualifications": 45            }
             ]
         """
 
@@ -110,7 +113,7 @@ def evaluate_batch(pool: list, role: str, location=True):
     return df
 
 
-def evaluate_all_CVs(pool: list, role: str, location=True):
+def evaluate_all_CVs(pool: list, role: str, location=True, description: str=None):
     """
     Splits CVs into batches, evaluates them and aggregates the results.
     Returns results as a JSON string.
@@ -123,12 +126,12 @@ def evaluate_all_CVs(pool: list, role: str, location=True):
     for i in range(0, len(pool), 10):
         batch = pool[i:i+10]
 
-        batch_results = evaluate_batch(batch, role, location)
+        batch_results = evaluate_batch(batch, role, location, description)
         if batch_results is not None:
             all_results.append(batch_results)
 
     results_df = pd.concat(all_results, ignore_index=True)
-    results_df["Overall Suitability"] = ((results_df["experience"] + results_df["qualifications"]) / 2).round(0).astype(int)
+    results_df["Overall Suitability"] = ((results_df["Experience"] + results_df["Qualifications"]) / 2).round(0).astype(int)
     results_df = results_df.sort_values(by="Overall Suitability", ascending=False)
     results_df.to_markdown('./data/output/CV_evaluation.md', index=False)
     result_json = results_df.to_json(orient='records', indent=4)
