@@ -1,6 +1,21 @@
 import React, { useState } from "react";
 import './App.css';
 
+// Helper function to create CSV file from results
+const generateCSV = (data) => {
+  if (!data || data.length === 0) return "";
+
+  const headers = Object.keys(data[0]).join(",");
+  const rows = data.map((row) =>
+    Object.values(row)
+      .map((value) => `"${value}"`)
+      .join(",")
+  );
+
+  return [headers, ...rows].join("\n");
+};
+
+
 function App() {
   // State variables:
   const [selectedFunction, setSelectedFunction] = useState(null);
@@ -113,7 +128,7 @@ function App() {
       {selectedFunction && (
         <form onSubmit={handleSubmit} className="input-form">
           <div style={{ display: "flex", alignItems: "center" }}>
-            <label className="custom-file-input">
+            <label className="button-styling">
               Select {selectedFunction === "evaluate_table" ? "a file" : "files"}
               <input
                 type="file"
@@ -162,7 +177,16 @@ function App() {
             </label>
             <br /> */}
             <label>
-              Address column name
+              Employer address*
+              <input
+                type="text"
+                name="employer_address"
+                value={formData.employer_address || ""}
+                onChange={handleInputChange}
+              />
+            </label>
+            <label>
+              Candidate address column name
               <input
                 type="text"
                 name="candidate_address_column"
@@ -170,10 +194,10 @@ function App() {
                 onChange={handleInputChange}
               />
             </label>
-            <br />
           </>
         )}
         <div>
+          <br />
           Add custom metrics
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <input
@@ -190,6 +214,7 @@ function App() {
             />
             <button
               type="button"
+              className="small-button"
               onClick={() => {
                 if (newMetric.name && newMetric.value) {
                   setMetrics((prev) => [...prev, newMetric]);
@@ -197,18 +222,19 @@ function App() {
                 }
               }}
             >
-              Add Metric
+              Add metric
             </button>
           </div>
         </div>
         {metrics.length > 0 && (
           <div>
-            <h4>Added Metrics:</h4>
+            <h5>Added metrics:</h5>
             <ul>
               {metrics.map((metric, index) => (
                 <li key={index}>
                   {metric.name}: {metric.value}
                   <button
+                    className="small-button"
                     type="button"
                     onClick={() =>
                       setMetrics((prev) => prev.filter((_, i) => i !== index))
@@ -228,7 +254,7 @@ function App() {
     {selectedFunction === "evaluate_all_CVs" && (
       <>
         <label>
-          Role*
+          Job Title*
           <input
             type="text"
             name="role"
@@ -237,7 +263,7 @@ function App() {
           />
         </label>
         <label>
-          Job Description:
+          Job description<br />
           <textarea
             name="description"
             value={formData.description || ""}
@@ -265,7 +291,7 @@ function App() {
         {formData.find_travel_time_cvs && (
           <>
             <label>
-              Employer address
+              Employer address*
               <input
                 type="text"
                 name="location"
@@ -279,33 +305,56 @@ function App() {
       </>
     )}
     <br />
-    <button type="submit" className="submit-button">
+    <button type="submit" className="button-styling">
       Run
     </button>
   </form>
 )}
       {error && <p className="error-text">{error}</p>}
-      <h2>Results</h2>
-      <table className="results-table">
-        <thead>
-          <tr>
-            {Array.isArray(results) && results.length > 0 &&
-              Object.keys(results[0]).map((key) => <th key={key}>{key}</th>)}
-          </tr>
-        </thead>
-        <tbody>
-          {Array.isArray(results) &&
-            results.map((row, index) => (
+
+      {/* Results: */}
+      {results.length > 0 && (
+      <>
+        <h2>Results</h2>
+        <table className="results-table">
+          <thead>
+            <tr>
+              {Object.keys(results[0]).map((key) => (
+                <th key={key}>{key}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {results.map((row, index) => (
               <tr key={index}>
                 {Object.values(row).map((value, i) => (
                   <td key={i}>{value}</td>
                 ))}
               </tr>
             ))}
-        </tbody>
-      </table>
-    </div>
-  );
+          </tbody>
+        </table>
+        <br />
+        <button
+          className="button-styling"
+          onClick={() => {
+            const csvContent = generateCSV(results);
+            const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.setAttribute("href", url);
+            link.setAttribute("download", "results.csv");
+            link.style.display = "none";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }}
+        >
+          Download Results as CSV
+        </button>
+      </>
+        )}
+      </div>
+    );
 }
-
 export default App;
