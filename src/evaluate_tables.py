@@ -53,9 +53,9 @@ def evaluate_table(path, find_travel_time=False, travel_weight=0.35, employer_ad
         
         # Creates a relative overall score out of 100:
         if find_travel_time:
-                travel_normalized = 1 - (df['Travel Time (mins)'].clip(0, 120) / 120)
+                travel_normalised = 1 - (df['Travel Time (mins)'].clip(0, 120) / 120)
                 # By default, the travel_score contributes 35% to the 'Overall Score':
-                travel_score = travel_normalized * (max_score * travel_weight)            
+                travel_score = travel_normalised * max_score * travel_weight
                 weighted_sum += travel_score
                 min_score = weighted_sum.min()
                 max_score = weighted_sum.max()
