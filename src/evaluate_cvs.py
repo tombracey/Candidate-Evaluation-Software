@@ -4,7 +4,7 @@ import math
 import pandas as pd
 from src.utils.gemini import gemini, log_gemini_usage
 from src.utils.maps import get_distance_or_duration, log_google_maps_usage
-from src.utils.conversions import convert_to_text
+from src.utils.convert_to_text import convert_to_text
 
 def evaluate_batch(pool: list, role: str, location: bool=True, description: str=None):
     """Evaluates a batch of up to 10 CVs with a single Gemini request"""
