@@ -2,12 +2,12 @@ import os
 import json
 import math
 import pandas as pd
-from src.GCP_utils.gemini import gemini, log_gemini_usage
+from src.utils.gemini import gemini, log_gemini_usage
 from src.conversions.pdf import pdf_to_text
 from src.conversions.word import word_to_text
 from src.conversions.image import image_to_text
 from src.conversions.odt import convert_odf_to_text
-from src.GCP_utils.maps import get_distance_or_duration, log_google_maps_usage
+from src.utils.maps import get_distance_or_duration, log_google_maps_usage
 
 def convert_to_text(path):
     """

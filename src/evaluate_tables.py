@@ -1,5 +1,5 @@
 import pandas as pd
-from src.GCP_utils.maps import get_distance_or_duration, log_google_maps_usage
+from src.utils.maps import get_distance_or_duration, log_google_maps_usage
 
 def convert_to_df(path):
     if path.endswith('.csv'):
