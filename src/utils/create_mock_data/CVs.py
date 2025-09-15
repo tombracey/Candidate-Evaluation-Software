@@ -2,7 +2,7 @@ import random
 from datetime import datetime
 import pandas as pd
 from faker import Faker
-from src.GCP_utils.gemini import gemini
+from src.utils.gemini import gemini
 
 def generate_mock_CVs(num=1, role=None):
     fake = Faker()
