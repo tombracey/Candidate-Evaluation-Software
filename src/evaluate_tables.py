@@ -4,8 +4,12 @@ from src.utils.maps import get_distance_or_duration, log_google_maps_usage
 def convert_to_df(path):
     if path.endswith('.csv'):
         return pd.read_csv(path)
+    try:
+        return pd.read_excel(path)
+    except:
+        raise ValueError("Unsupported file format. Please provide a CSV or Excel file.")
 
-    
+
 def evaluate_table(path, find_travel_time=False, travel_weight=0.35, employer_address=None, candidate_address_column=None, **metrics):
     """Takes a df and optional metrics
     User can check for candidates' travel time and/or the travel 
@@ -64,6 +68,3 @@ def evaluate_table(path, find_travel_time=False, travel_weight=0.35, employer_ad
         
     df.to_markdown('./data/output/spreadsheet_evaluation.md', index=False)
     return df.to_json(orient='records', indent=4)
-
-
-evaluate_table('./data/mock_candidates.csv', True, employer_address='10 Downing Street', Experience=1, Qualifications=1)

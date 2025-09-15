@@ -11,3 +11,5 @@ python-dotenv
 odfdo
 fastapi
 uvicorn
+openpyxl
+xlrd
