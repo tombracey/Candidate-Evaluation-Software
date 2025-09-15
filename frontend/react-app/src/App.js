@@ -278,24 +278,24 @@ function App() {
           Account for travel time
           <input
             type="checkbox"
-            name="find_travel_time_cvs"
+            name="location"
             onChange={(e) =>
               setFormData((prev) => ({
                 ...prev,
-                find_travel_time_cvs: e.target.checked,
+                location: e.target.checked,
               }))
             }
           />
         </label>
         <br />
-        {formData.find_travel_time_cvs && (
+        {formData.location && (
           <>
             <label>
               Employer address*
               <input
                 type="text"
-                name="location"
-                value={formData.location || ""}
+                name="cv_employer_address"
+                value={formData.cv_employer_address || ""}
                 onChange={handleInputChange}
               />
             </label>

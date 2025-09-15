@@ -19,8 +19,9 @@ class EvaluateTableRequest(BaseModel):
 class EvaluateAllCVsRequest(BaseModel):
     pool: List[str]
     role: str
-    location: Optional[str] = None
+    location: Optional[bool] = None
     description: Optional[str] = None
+    cv_employer_address: Optional[str] = None
 
 # Endpoints
 @app.post("/evaluate_table/")
@@ -45,7 +46,8 @@ async def evaluate_all_CVs_endpoint(request: EvaluateAllCVsRequest):
             pool=request.pool,
             role=request.role,
             location=request.location,
-            description=request.description
+            description=request.description,
+            cv_employer_address=request.cv_employer_address
         )
         return {"ok": True, "data": result}
     except Exception as e:

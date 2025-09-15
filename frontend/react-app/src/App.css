@@ -46,19 +46,40 @@
   margin-bottom: 10px;
 }
 
-.submit-button {
+button {
+  all: unset;
+}
+
+.button-styling {
+  width: fit-content;
+  display: inline-block;
   background-color: #0074D9;
   color: white;
-  padding: 10px 20px;
-  border: none;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px;
+  transition: background-color 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.button-styling:hover {
+  background-color: #005fa3;
+}
+
+.small-button {
+  background-color: #0074D9;
+  color: white;
+  padding: 4px 6px;
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s;
-  font-size:  16px;
+  font-size: 12px;
 }
 
-.submit-button:hover {
+.small-button:hover {
   background-color: #005fa3;
 }
 
@@ -80,23 +101,20 @@
   display: none;
 }
 
-.custom-file-input {
-  width: fit-content;
-  display: inline-block;
-  background-color: #0074D9;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.3s;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.custom-file-input:hover {
-  background-color: #005fa3;
-}
-
 h1 {
   text-align: center;
+}
+
+textarea {
+  font-family: 'Lato', sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  width: 80%;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+input {
+  border-radius: 5px;
+  margin-left: 5px;
 }
