@@ -3,42 +3,8 @@ import json
 import math
 import pandas as pd
 from src.utils.gemini import gemini, log_gemini_usage
-from src.conversions.pdf import pdf_to_text
-from src.conversions.word import word_to_text
-from src.conversions.image import image_to_text
-from src.conversions.odt import convert_odf_to_text
 from src.utils.maps import get_distance_or_duration, log_google_maps_usage
-
-def convert_to_text(path):
-    """
-    Used to convert CVs to text before parsing into Gemini
-    """
-    path_lower = path.lower()
-    if path_lower.endswith('.pdf'):
-        return pdf_to_text(path)
-    elif path_lower.endswith('.docx') or path_lower.endswith('.doc'):
-        return word_to_text(path)
-    elif path_lower.endswith('.txt'):
-        with open(path, 'r', encoding='utf-8') as f:
-            return f.read()
-    elif path_lower.endswith('.odt'):
-        return convert_odf_to_text(path)
-    elif path_lower.endswith('.jpg') or path_lower.endswith('.png'):
-        return image_to_text(path)
-    else:
-        print("Could not parse file type")
-
-
-def get_CV_paths():
-    # for testing purposes
-    CVs_path = './data/CVs'
-    CVs = []
-
-    for filename in os.listdir(CVs_path):
-            filepath = os.path.join(CVs_path, filename)
-            CVs.append(filepath)
-    return CVs
-
+from src.utils.conversions import convert_to_text
 
 def evaluate_batch(pool: list, role: str, location: bool=True, description: str=None):
     """Evaluates a batch of up to 10 CVs with a single Gemini request"""
@@ -134,7 +100,7 @@ def evaluate_all_CVs(pool: list, role: str, location=True, description: str=None
     results_df = pd.concat(all_results, ignore_index=True)
     results_df["Overall Suitability"] = ((results_df["Experience"] + results_df["Qualifications"]) / 2).round(0).astype(int)
 
-    if location and cv_employer_address:
+    if cv_employer_address:
         travel_times = []
         requests = 0
         for candidate_address in results_df["Location"]:
@@ -161,3 +127,14 @@ def evaluate_all_CVs(pool: list, role: str, location=True, description: str=None
     results_df.to_markdown('./data/output/CV_evaluation.md', index=False)
     result_json = results_df.to_json(orient='records', indent=4)
     return result_json
+
+
+def get_CV_paths():
+    # (for testing purposes)
+    CVs_path = './data/CVs'
+    CVs = []
+
+    for filename in os.listdir(CVs_path):
+            filepath = os.path.join(CVs_path, filename)
+            CVs.append(filepath)
+    return CVs
