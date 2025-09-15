@@ -7,6 +7,7 @@ from src.conversions.pdf import pdf_to_text
 from src.conversions.word import word_to_text
 from src.conversions.image import image_to_text
 from src.conversions.odt import convert_odf_to_text
+from src.GCP_utils.maps import get_distance_or_duration, log_google_maps_usage
 
 def convert_to_text(path):
     """
@@ -113,7 +114,7 @@ def evaluate_batch(pool: list, role: str, location: bool=True, description: str=
     return df
 
 
-def evaluate_all_CVs(pool: list, role: str, location=True, description: str=None):
+def evaluate_all_CVs(pool: list, role: str, location=True, description: str=None, cv_employer_address=None):
     """
     Splits CVs into batches, evaluates them and aggregates the results.
     Returns results as a JSON string.
@@ -132,6 +133,30 @@ def evaluate_all_CVs(pool: list, role: str, location=True, description: str=None
 
     results_df = pd.concat(all_results, ignore_index=True)
     results_df["Overall Suitability"] = ((results_df["Experience"] + results_df["Qualifications"]) / 2).round(0).astype(int)
+
+    if location and cv_employer_address:
+        travel_times = []
+        requests = 0
+        for candidate_address in results_df["Location"]:
+            requests += 1
+            try:
+                travel_time = get_distance_or_duration(candidate_address, cv_employer_address)
+                travel_times.append(travel_time)
+            except:
+                travel_times.append(None)
+        log_google_maps_usage(requests)
+
+        results_df['Travel Time (mins)'] = travel_times
+        
+        
+        travel_normalised = 1 - ((results_df['Travel Time (mins)'] -20).clip(0, 100) / 100).fillna(0)
+
+        # Recalculates 'Overall Suitability' column to include travel time (35% weight):
+        results_df['Overall Suitability'] = ((results_df['Overall Suitability'] * 0.65) + (travel_normalised * 100 * 0.35)).round(0).astype(int)  
+        # Adds the column to the end again:
+        columns = [col for col in results_df.columns if col != "Overall Suitability"] + ["Overall Suitability"]
+        results_df = results_df[columns]
+
     results_df = results_df.sort_values(by="Overall Suitability", ascending=False)
     results_df.to_markdown('./data/output/CV_evaluation.md', index=False)
     result_json = results_df.to_json(orient='records', indent=4)
