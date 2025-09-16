@@ -15,6 +15,7 @@ class EvaluateTableRequest(BaseModel):
     employer_address: Optional[str]
     candidate_address_column: Optional[str] = None
     metrics: Optional[dict] = None
+    google_api_key: Optional[str] = None
 
 class EvaluateAllCVsRequest(BaseModel):
     pool: List[str]
@@ -22,6 +23,7 @@ class EvaluateAllCVsRequest(BaseModel):
     location: Optional[bool] = None
     description: Optional[str] = None
     cv_employer_address: Optional[str] = None
+    google_api_key: Optional[str] = None
 
 # Endpoints
 @app.post("/evaluate_table/")
@@ -33,6 +35,7 @@ async def evaluate_table_endpoint(request: EvaluateTableRequest):
             travel_weight=request.travel_weight,
             employer_address=request.employer_address,
             candidate_address_column=request.candidate_address_column,
+            google_api_key=request.google_api_key,
             **(request.metrics or {})
         )
         return {"ok": True, "data": result}
@@ -47,7 +50,8 @@ async def evaluate_all_CVs_endpoint(request: EvaluateAllCVsRequest):
             role=request.role,
             location=request.location,
             description=request.description,
-            cv_employer_address=request.cv_employer_address
+            cv_employer_address=request.cv_employer_address,
+            api_key=request.google_api_key
         )
         return {"ok": True, "data": result}
     except Exception as e:

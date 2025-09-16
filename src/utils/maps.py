@@ -22,7 +22,7 @@ def log_google_maps_usage(num_requests):
         json.dump(usage_data, f, indent=2)
 
 
-def get_distance_or_duration(origin: str, destination: str, mode: str = "transit", info_type: str = "duration"):
+def get_distance_or_duration(origin: str, destination: str, api_key=None, mode: str = "transit", info_type: str = "duration"):
     """
     Args:
         origin
@@ -30,10 +30,12 @@ def get_distance_or_duration(origin: str, destination: str, mode: str = "transit
         mode: "driving", "walking", "bicycling" or "transit"
         info_type: "distance" or "duration".
     """
-    load_dotenv()
-    api_key = os.getenv("GOOGLE_API_KEY")
     if not api_key:
-        raise ValueError("API key not set.")
+        try:
+            load_dotenv()
+            api_key = os.getenv("GOOGLE_API_KEY")
+        except:
+            raise ValueError("API key not set.")
     base_url = "https://maps.googleapis.com/maps/api/distancematrix/json?"
 
     now = datetime.now()

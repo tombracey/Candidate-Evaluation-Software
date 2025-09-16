@@ -22,13 +22,14 @@ def log_gemini_usage(num_requests):
         json.dump(usage_data, f, indent=2)
 
 
-def gemini(prompt):
-    load_dotenv()
-    api_key = os.getenv("GOOGLE_API_KEY")
-    genai.configure(api_key=api_key)
-
+def gemini(prompt, api_key=None):
     if not api_key:
-        raise ValueError("API key not set.")
+        try:
+            load_dotenv()
+            api_key = os.getenv("GOOGLE_API_KEY")
+        except:
+            raise ValueError("API key not set.")
+    genai.configure(api_key=api_key)
 
     model = genai.GenerativeModel("gemini-2.0-flash")
     response = model.generate_content(prompt)

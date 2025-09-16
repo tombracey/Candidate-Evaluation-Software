@@ -6,7 +6,7 @@ from src.utils.gemini import gemini, log_gemini_usage
 from src.utils.maps import get_distance_or_duration, log_google_maps_usage
 from src.utils.convert_to_text import convert_to_text
 
-def evaluate_batch(pool: list, role: str, location: bool=True, description: str=None):
+def evaluate_batch(pool: list, role: str, location: bool=True, description: str=None, api_key: str=None):
     """Evaluates a batch of up to 10 CVs with a single Gemini request"""
     pool_text = []
     for candidate in pool:
@@ -60,7 +60,7 @@ def evaluate_batch(pool: list, role: str, location: bool=True, description: str=
 
     prompt += "\nAll values must be valid JSON, return no extra text."
     
-    raw_output = gemini(prompt)
+    raw_output = gemini(prompt, api_key=api_key)
     clean_output = (
         raw_output
         .replace('```json', '')
@@ -80,7 +80,7 @@ def evaluate_batch(pool: list, role: str, location: bool=True, description: str=
     return df
 
 
-def evaluate_all_CVs(pool: list, role: str, location=True, description: str=None, cv_employer_address=None):
+def evaluate_all_CVs(pool: list, role: str, location=True, description: str=None, cv_employer_address:str=None, api_key: str=None):
     """
     Splits CVs into batches, evaluates them and aggregates the results.
     Returns results as a JSON string.
@@ -93,7 +93,7 @@ def evaluate_all_CVs(pool: list, role: str, location=True, description: str=None
     for i in range(0, len(pool), 10):
         batch = pool[i:i+10]
 
-        batch_results = evaluate_batch(batch, role, location, description)
+        batch_results = evaluate_batch(batch, role, location, description, api_key)
         if batch_results is not None:
             all_results.append(batch_results)
 
@@ -115,10 +115,10 @@ def evaluate_all_CVs(pool: list, role: str, location=True, description: str=None
         results_df['Travel Time (mins)'] = travel_times
         
         
-        travel_normalised = 1 - ((results_df['Travel Time (mins)'] -20).clip(0, 100) / 100).fillna(0)
+        travel_normalised = 1 - ((results_df['Travel Time (mins)'] -20).clip(0, 100) / 100).fillna(1)
 
-        # Recalculates 'Overall Suitability' column to include travel time (35% weight):
-        results_df['Overall Suitability'] = ((results_df['Overall Suitability'] * 0.65) + (travel_normalised * 100 * 0.35)).round(0).astype(int)  
+        # Recalculates 'Overall Suitability' column to include travel time (25% weight):
+        results_df['Overall Suitability'] = ((results_df['Overall Suitability'] * 0.75) + (travel_normalised * 100 * 0.25)).round(0).astype(int)  
         # Adds the column to the end again:
         columns = [col for col in results_df.columns if col != "Overall Suitability"] + ["Overall Suitability"]
         results_df = results_df[columns]

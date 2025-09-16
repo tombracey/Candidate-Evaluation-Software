@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './App.css';
 
-// Helper function to create CSV file from results
+// Function to create CSV file from results
 const generateCSV = (data) => {
   if (!data || data.length === 0) return "";
 
@@ -18,6 +18,8 @@ const generateCSV = (data) => {
 
 function App() {
   // State variables:
+  const [googleApiKey, setGoogleApiKey] = useState("");
+  const [showApiKey, setShowApiKey] = useState(false);
   const [selectedFunction, setSelectedFunction] = useState(null);
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [formData, setFormData] = useState({});
@@ -25,6 +27,14 @@ function App() {
   const [error, setError] = useState("");
   const [metrics, setMetrics] = useState([]);
   const [newMetric, setNewMetric] = useState({ name: "", value: "" });
+
+  // Retrieves Google API key from localStorage
+    useEffect(() => {
+      const savedKey = localStorage.getItem("googleApiKey");
+      if (savedKey) {
+        setGoogleApiKey(savedKey);
+      }
+    }, []);
 
   // Selects the backend Python function
   const handleFunctionSelect = (func) => {
@@ -51,6 +61,11 @@ function App() {
     e.preventDefault();
     setError("");
 
+    if (!googleApiKey) {
+      setError("Google API key is required");
+      return;
+    }
+
     let args = {};
     let url = "";
 
@@ -65,8 +80,8 @@ function App() {
     }
 
     args = isTableFunction
-      ? { path: filePaths[0], ...formData }
-      : { pool: filePaths, ...formData };
+      ? { path: filePaths[0], ...formData, google_api_key: googleApiKey }
+      : { pool: filePaths, ...formData, google_api_key: googleApiKey };
 
     url = `http://127.0.0.1:8000/${selectedFunction}/`;
 
@@ -94,6 +109,55 @@ function App() {
   return (
     <div className="app-container">
       <h1>Candidate Evaluation</h1>
+
+      <div className="api-key-container">
+        <label>
+          Google API Key:
+          <div style={{ position: "relative", display: "inline-block" }}>
+            <input
+              type={showApiKey ? "text" : "password"}
+              value={googleApiKey}
+              onChange={(e) => setGoogleApiKey(e.target.value)}
+              placeholder="Enter your Google API key"
+              style={{ paddingRight: "30px" }}
+            />
+            <span
+              onClick={() => setShowApiKey((prev) => !prev)}
+              style={{
+                position: "absolute",
+                right: "10px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                cursor: "pointer",
+                color: "gray",
+                fontSize: "14px",
+              }}
+            >
+              {showApiKey ? "🙈" : "👁"} {/* Use an emoji or icon */}
+            </span>
+          </div>
+        </label>
+        <button
+          className="button-styling"
+          onClick={() => {
+            if (!googleApiKey) {
+              alert("Please enter your Google API key.");
+            } else {
+              localStorage.setItem("googleApiKey", googleApiKey);
+              alert("API key saved");
+            }
+          }}
+        >
+          Save Key
+        </button>
+      </div>
+
+      {!googleApiKey && (
+        <p style={{ color: "red", marginTop: "10px" }}>
+          Google API key is not set. Please enter your key to use all features.
+        </p>
+      )}
+
       <div className="function-selector">
         <div
           onClick={() => handleFunctionSelect("evaluate_all_CVs")}
