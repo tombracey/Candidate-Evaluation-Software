@@ -27,6 +27,7 @@ function App() {
   const [error, setError] = useState("");
   const [metrics, setMetrics] = useState([]);
   const [newMetric, setNewMetric] = useState({ name: "", value: "" });
+  const [loading, setLoading] = useState(false);
 
   // Retrieves Google API key from localStorage
     useEffect(() => {
@@ -60,41 +61,44 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-
+    setLoading(true); // Start loading
+  
     if (!googleApiKey) {
       setError("Google API key is required");
+      setLoading(false); // Stop loading
       return;
     }
-
+  
     let args = {};
     let url = "";
-
+  
     const isTableFunction = selectedFunction === "evaluate_table";
     const filePaths = isTableFunction
       ? [selectedFiles[0]?.path]
       : Array.from(selectedFiles).map((file) => file.path);
-
+  
     if (filePaths.length === 0 || !filePaths[0]) {
       setError(`Please upload ${isTableFunction ? "a spreadsheet" : "at least one file for CVs"}.`);
+      setLoading(false);
       return;
     }
-
+  
     args = isTableFunction
       ? { path: filePaths[0], ...formData, google_api_key: googleApiKey }
       : { pool: filePaths, ...formData, google_api_key: googleApiKey };
-
+  
     url = `http://127.0.0.1:8000/${selectedFunction}/`;
-
+  
     try {
       const response = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(args),
       });
-
+  
       const data = await response.json();
       console.log("Backend Response:", data);
-
+  
       if (data.ok) {
         const parsedResults = typeof data.data === "string" ? JSON.parse(data.data) : data.data;
         setResults(Array.isArray(parsedResults) ? parsedResults : []);
@@ -103,11 +107,14 @@ function App() {
       }
     } catch (err) {
       setError(`Failed to communicate with backend: ${err.message}`);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <div className="app-container">
+
       <h1>Candidate Evaluation</h1>
 
       <div className="api-key-container">
@@ -133,7 +140,7 @@ function App() {
                 fontSize: "14px",
               }}
             >
-              {showApiKey ? "🙈" : "👁"} {/* Use an emoji or icon */}
+              {showApiKey ? "🙈" : "👁"}
             </span>
           </div>
         </label>
@@ -228,18 +235,6 @@ function App() {
         </label>
         {formData.find_travel_time && (
           <>
-            {/* <label>
-              Travel Weight:
-              <input
-                type="number"
-                step="0.01"
-                name="travel_weight"
-                value={formData.travel_weight || ""}
-                onChange={handleInputChange}
-                placeholder="Default is 0.35"
-              />
-            </label>
-            <br /> */}
             <label>
               Employer address*
               <input
@@ -314,6 +309,7 @@ function App() {
         )}
       </>
     )}
+    
     {/* CV form: */}
     {selectedFunction === "evaluate_all_CVs" && (
       <>
@@ -372,6 +368,13 @@ function App() {
     <button type="submit" className="button-styling">
       Run
     </button>
+
+    {loading && (
+          <div className="spinner-container">
+            <div className="spinner"></div>
+          </div>
+        )}
+
   </form>
 )}
       {error && <p className="error-text">{error}</p>}
