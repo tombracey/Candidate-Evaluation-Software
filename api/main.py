@@ -12,10 +12,10 @@ class EvaluateTableRequest(BaseModel):
     path: str
     find_travel_time: bool = False
     travel_weight: Optional[float] = 0.35
-    employer_address: Optional[str]
+    employer_address: Optional[str] = None
     candidate_address_column: Optional[str] = None
-    metrics: Optional[dict] = None
     google_api_key: Optional[str] = None
+    metrics: Optional[dict] = None
 
 class EvaluateAllCVsRequest(BaseModel):
     pool: List[str]

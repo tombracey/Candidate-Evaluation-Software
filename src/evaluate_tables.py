@@ -10,7 +10,7 @@ def convert_to_df(path):
         raise ValueError("Unsupported file format. Please provide a CSV or Excel file.")
 
 
-def evaluate_table(path, find_travel_time=False, travel_weight=0.35, employer_address=None, candidate_address_column=None, api_key=None, **metrics):
+def evaluate_table(path, find_travel_time=False, travel_weight=0.35, employer_address=None, candidate_address_column=None, google_api_key=None, **metrics):
     """Takes a df and optional metrics
     User can check for candidates' travel time and/or the travel 
      outputs an overall score or just the travel time"""
@@ -40,7 +40,7 @@ def evaluate_table(path, find_travel_time=False, travel_weight=0.35, employer_ad
         for candidate_address in df[candidate_address_column]:
             requests += 1
             try:
-                travel_time = get_distance_or_duration(candidate_address, employer_address, api_key=api_key)
+                travel_time = get_distance_or_duration(candidate_address, employer_address, api_key=google_api_key)
                 travel_times.append(travel_time)
             except:
                 travel_times.append(None)
