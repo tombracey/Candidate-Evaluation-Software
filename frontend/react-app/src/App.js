@@ -41,43 +41,49 @@ function App() {
     e.preventDefault();
     setError("");
     setLoading(true);
-
+  
     if (!googleApiKey) {
       setError("Google API key is required");
       setLoading(false);
       return;
     }
-
+  
     let args = {};
     let url = "";
-
+  
     const isTableFunction = selectedFunction === "evaluate_table";
     const filePaths = isTableFunction
       ? [selectedFiles[0]?.path]
       : Array.from(selectedFiles).map((file) => file.path);
-
+  
     if (filePaths.length === 0 || !filePaths[0]) {
       setError(`Please upload ${isTableFunction ? "a spreadsheet" : "at least one file for CVs"}.`);
       setLoading(false);
       return;
     }
-
+  
+    // Transform metrics array into a dict:
+    const metricsDict = metrics.reduce((acc, metric) => {
+      acc[metric.name] = parseFloat(metric.value);
+      return acc;
+    }, {});
+  
     args = isTableFunction
-      ? { path: filePaths[0], ...formData, google_api_key: googleApiKey }
+      ? { path: filePaths[0], ...formData, metrics: metricsDict, google_api_key: googleApiKey }
       : { pool: filePaths, ...formData, google_api_key: googleApiKey };
-
+  
     url = `http://127.0.0.1:8000/${selectedFunction}/`;
-
+  
     try {
       const response = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(args),
       });
-
+  
       const data = await response.json();
       console.log("Backend Response:", data);
-
+  
       if (data.ok) {
         const parsedResults = typeof data.data === "string" ? JSON.parse(data.data) : data.data;
         setResults(Array.isArray(parsedResults) ? parsedResults : []);

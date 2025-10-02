@@ -36,7 +36,7 @@ async def evaluate_table_endpoint(request: EvaluateTableRequest):
             employer_address=request.employer_address,
             candidate_address_column=request.candidate_address_column,
             google_api_key=request.google_api_key,
-            **(request.metrics or {})
+            metrics=request.metrics
         )
         return {"ok": True, "data": result}
     except Exception as e:
