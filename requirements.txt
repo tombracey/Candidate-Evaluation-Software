@@ -13,3 +13,5 @@ fastapi
 uvicorn
 openpyxl
 xlrd
+asyncio
+httpx
