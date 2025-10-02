@@ -10,9 +10,9 @@ def word_to_text(path):
     elif path.endswith('.doc'):
         system = platform.system()
         binary_map = {
-            "Windows": "bin/antiword-win.exe",
-            "Darwin": "bin/antiword-mac",
-            "Linux": "bin/antiword-linux"
+            "Windows": "src/bin/antiword-win.exe",
+            "Darwin": "src/bin/antiword-mac",
+            "Linux": "src/bin/antiword-linux"
         }
         
         try:
