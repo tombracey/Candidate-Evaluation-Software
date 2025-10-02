@@ -1,4 +1,5 @@
 import pandas as pd
+import asyncio
 from src.utils.maps import get_distance_or_duration, log_google_maps_usage
 
 def convert_to_df(path):
@@ -10,7 +11,7 @@ def convert_to_df(path):
         raise ValueError("Unsupported file format. Please provide a CSV or Excel file.")
 
 
-def evaluate_table(path, find_travel_time=False, travel_weight=0.35, employer_address=None, candidate_address_column=None, google_api_key=None, metrics=None):
+async def evaluate_table(path, find_travel_time=False, travel_weight=0.35, employer_address=None, candidate_address_column=None, google_api_key=None, metrics=None):
     """Takes a df and optional metrics
     User can check for candidates' travel time and/or the travel 
      outputs an overall score or just the travel time"""
@@ -35,16 +36,15 @@ def evaluate_table(path, find_travel_time=False, travel_weight=0.35, employer_ad
         if not candidate_address_column:
             raise ValueError("Please specify the address column.")
 
-        travel_times = []
-        requests = 0
-        for candidate_address in df[candidate_address_column]:
-            requests += 1
+        # Fetches travel times asynchronously:
+        async def fetch_travel_time(candidate_address):
             try:
-                travel_time = get_distance_or_duration(candidate_address, employer_address, api_key=google_api_key)
-                travel_times.append(travel_time)
+                return await get_distance_or_duration(candidate_address, employer_address, api_key=google_api_key)
             except:
-                travel_times.append(None)
-        log_google_maps_usage(requests)
+                return None
+
+        travel_times = await asyncio.gather(*[fetch_travel_time(addr) for addr in df[candidate_address_column]])
+        log_google_maps_usage(len(df[candidate_address_column]))
 
         df['Travel Time (mins)'] = travel_times
         df = df.sort_values(by='Travel Time (mins)')
@@ -68,13 +68,3 @@ def evaluate_table(path, find_travel_time=False, travel_weight=0.35, employer_ad
         
     df.to_markdown('./data/output/spreadsheet_evaluation.md', index=False)
     return df.to_json(orient='records', indent=4)
-
-print(evaluate_table(
-    path="./data/mock_candidates.csv", 
-    find_travel_time=True, 
-    travel_weight=0.35, 
-    employer_address="EC1A 1BB", 
-    candidate_address_column="Postcode", 
-    google_api_key=None, 
-    metrics={"Experience": 0.5, "Qualifications": 0.15}
-))

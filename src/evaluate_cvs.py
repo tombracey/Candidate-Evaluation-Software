@@ -2,16 +2,20 @@ import os
 import json
 import math
 import pandas as pd
+import asyncio
 from src.utils.gemini import gemini, log_gemini_usage
 from src.utils.maps import get_distance_or_duration, log_google_maps_usage
 from src.utils.convert_to_text import convert_to_text
 
-def evaluate_batch(pool: list, role: str, location: bool=True, description: str=None, api_key: str=None):
+async def evaluate_batch(pool: list, role: str, location: bool=True, description: str=None, api_key: str=None):
     """Evaluates a batch of up to 10 CVs with a single Gemini request"""
     pool_text = []
     for candidate in pool:
-        candidate = convert_to_text(candidate)
-        pool_text.append(candidate)
+        try: 
+            candidate = convert_to_text(candidate)
+            pool_text.append(candidate)
+        except:
+            continue
 
     candidates_block = "\n\n".join(
         [f"CANDIDATE {i+1}:\n{txt}\n" for i, txt in enumerate(pool_text)]
@@ -60,7 +64,13 @@ def evaluate_batch(pool: list, role: str, location: bool=True, description: str=
 
     prompt += "\nAll values must be valid JSON, return no extra text."
     
-    raw_output = gemini(prompt, api_key=api_key)
+    try:
+        raw_output = await asyncio.to_thread(gemini, prompt, api_key=api_key)
+        print("Raw Gemini output:", raw_output)
+    except Exception as e:
+        print(f"Error calling Gemini API: {e}")
+        return None
+    
     clean_output = (
         raw_output
         .replace('```json', '')
@@ -80,7 +90,7 @@ def evaluate_batch(pool: list, role: str, location: bool=True, description: str=
     return df
 
 
-def evaluate_all_CVs(pool: list, role: str, location=True, description: str=None, cv_employer_address:str=None, api_key: str=None):
+async def evaluate_all_CVs(pool: list, role: str, location=True, description: str=None, cv_employer_address:str=None, api_key: str=None):
     """
     Splits CVs into batches, evaluates them and aggregates the results.
     Returns results as a JSON string.
@@ -90,27 +100,28 @@ def evaluate_all_CVs(pool: list, role: str, location=True, description: str=None
 
     all_results = []
 
-    for i in range(0, len(pool), 10):
-        batch = pool[i:i+10]
+    tasks = [
+        evaluate_batch(pool[i:i+10], role, location, description, api_key)
+        for i in range(0, len(pool), 10)
+    ]
+    batch_results = await asyncio.gather(*tasks)
 
-        batch_results = evaluate_batch(batch, role, location, description, api_key)
-        if batch_results is not None:
-            all_results.append(batch_results)
+    for result in batch_results:
+        if result is not None:
+            all_results.append(result)
 
     results_df = pd.concat(all_results, ignore_index=True)
     results_df["Overall Suitability"] = ((results_df["Experience"] + results_df["Qualifications"]) / 2).round(0).astype(int)
 
     if cv_employer_address:
-        travel_times = []
-        requests = 0
-        for candidate_address in results_df["Location"]:
-            requests += 1
+        async def fetch_travel_time(candidate_address):
             try:
-                travel_time = get_distance_or_duration(candidate_address, cv_employer_address)
-                travel_times.append(travel_time)
-            except:
-                travel_times.append(None)
-        log_google_maps_usage(requests)
+                return await get_distance_or_duration(candidate_address, cv_employer_address)
+            except Exception as e:
+                print(f"Error calculating travel time for {candidate_address}: {e}")
+                return None
+
+        travel_times = await asyncio.gather(*[fetch_travel_time(addr) for addr in results_df["Location"]])
 
         results_df['Travel Time (mins)'] = travel_times
         
@@ -138,3 +149,23 @@ def get_CV_paths():
             filepath = os.path.join(CVs_path, filename)
             CVs.append(filepath)
     return CVs
+
+
+if __name__ == "__main__":
+    # Define test inputs
+    pool = get_CV_paths()  # Use the get_CV_paths function to get CV file paths
+    role = "Data Engineer"
+    location = True
+    description = "Looking for a skilled data engineer."
+    cv_employer_address = "EC1A 1BB"
+
+    # Run the evaluate_all_CVs function and print the result
+    result = asyncio.run(evaluate_all_CVs(
+        pool=pool,
+        role=role,
+        location=location,
+        description=description,
+        cv_employer_address=cv_employer_address
+    ))
+    print("Evaluation Results:")
+    print(result)

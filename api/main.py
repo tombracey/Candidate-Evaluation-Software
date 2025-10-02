@@ -29,7 +29,7 @@ class EvaluateAllCVsRequest(BaseModel):
 @app.post("/evaluate_table/")
 async def evaluate_table_endpoint(request: EvaluateTableRequest):
     try:
-        result = evaluate_table(
+        result = await evaluate_table(
             path=request.path,
             find_travel_time=request.find_travel_time,
             travel_weight=request.travel_weight,
@@ -45,7 +45,7 @@ async def evaluate_table_endpoint(request: EvaluateTableRequest):
 @app.post("/evaluate_all_CVs/")
 async def evaluate_all_CVs_endpoint(request: EvaluateAllCVsRequest):
     try:
-        result = evaluate_all_CVs(
+        result = await evaluate_all_CVs(
             pool=request.pool,
             role=request.role,
             location=request.location,

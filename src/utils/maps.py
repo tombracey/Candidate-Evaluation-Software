@@ -1,4 +1,4 @@
-import requests
+import httpx
 import os
 import json
 from datetime import datetime, timedelta, time, date
@@ -22,7 +22,7 @@ def log_google_maps_usage(num_requests):
         json.dump(usage_data, f, indent=2)
 
 
-def get_distance_or_duration(origin: str, destination: str, api_key=None, mode: str = "transit", info_type: str = "duration"):
+async def get_distance_or_duration(origin: str, destination: str, api_key=None, mode: str = "transit", info_type: str = "duration"):
     """
     Args:
         origin
@@ -40,7 +40,7 @@ def get_distance_or_duration(origin: str, destination: str, api_key=None, mode: 
 
     now = datetime.now()
     tomorrow = now + timedelta(days=1)
-    eight_am_tomorrow = datetime.combine(tomorrow.date(), time(8, 0)) # realistic commuting time
+    eight_am_tomorrow = datetime.combine(tomorrow.date(), time(8, 0)) # realistic commuting time imo
     departure_timestamp = int(eight_am_tomorrow.timestamp())
 
     params = {
@@ -51,8 +51,9 @@ def get_distance_or_duration(origin: str, destination: str, api_key=None, mode: 
         "departure_time": departure_timestamp
     }
 
-    response = requests.get(base_url, params=params)
-    data = response.json()
+    async with httpx.AsyncClient() as client:
+        response = await client.get(base_url, params=params)
+        data = response.json()
 
     element = data["rows"][0]["elements"][0]
 
