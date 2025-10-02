@@ -1,0 +1,62 @@
+**Frank Booker**
+GU14 4DP | 07700 900314 | frank.booker@email.com | [LinkedIn Profile URL - Replace with a generated one]
+
+**Summary**
+
+A highly motivated and analytical recent graduate with a BSc in Computer Science from the University of Bath, eager to contribute to a data-driven environment as a Junior Data Engineer. Possessing a strong foundation in data warehousing, ETL processes, and database management, complemented by practical experience in Python, SQL, and cloud technologies. Proven ability to learn quickly, solve complex problems, and collaborate effectively within a team. Dedicated to developing scalable and efficient data pipelines to support insightful business decisions.
+
+**Education**
+
+*   **University of Bath, Bath, UK**
+    *   BSc (Hons) Computer Science | September 2020 – June 2023
+    *   *   First Class Honours (75%)
+    *   *   Dissertation: *Predictive Modelling of Customer Churn using Machine Learning Algorithms* (achieved 82%)
+    *   *   Relevant Coursework: Data Structures and Algorithms, Database Systems, Data Mining, Machine Learning, Cloud Computing, Software Engineering Principles.
+*   **Lord Wandsworth College, Hook, Hampshire**
+    *   A-Levels: Mathematics (A*), Physics (A), Computer Science (A) | September 2018 – June 2020
+    *   GCSEs: 9 A*-A grades including Mathematics, English, and Sciences
+
+**Technical Skills**
+
+*   **Programming Languages:** Python (Proficient), SQL (Expert), Java (Intermediate), R (Basic)
+*   **Databases:** PostgreSQL, MySQL, MongoDB, Snowflake
+*   **Cloud Technologies:** AWS (S3, EC2, Lambda), Azure (Blob Storage, Virtual Machines), Google Cloud Platform (BigQuery)
+*   **ETL Tools:** Apache Airflow, Apache NiFi, Informatica PowerCenter (Exposure)
+*   **Data Warehousing:** Data Modelling (Star Schema, Snowflake Schema), Dimensional Modelling
+*   **Operating Systems:** Windows, Linux, macOS
+*   **Version Control:** Git, GitHub
+*   **Other:** Data Visualization (Tableau, Power BI), Big Data (Hadoop, Spark – Introductory), Agile Methodologies
+
+**Projects**
+
+*   **E-commerce Sales Data Analysis & Pipeline (Personal Project) | January 2023 – April 2023**
+    *   Designed and implemented an end-to-end ETL pipeline to ingest, clean, and transform e-commerce sales data from various sources (CSV, API) into a Snowflake data warehouse.
+    *   Utilized Python (Pandas, NumPy) for data cleaning and transformation, Apache Airflow for workflow orchestration, and SQL for data warehousing.
+    *   Developed interactive dashboards in Tableau to visualize key sales metrics, identify trends, and generate actionable insights.
+    *   Demonstrated proficiency in data modelling, database design, and data visualization techniques. Code available on GitHub.
+*   **University Project: Social Media Sentiment Analysis (Group Project) | September 2022 – December 2022**
+    *   Collaborated with a team of four to develop a sentiment analysis model for Twitter data using Natural Language Processing (NLP) techniques.
+    *   Collected and pre-processed a large dataset of tweets, implemented various NLP algorithms (e.g., sentiment lexicon analysis, machine learning classifiers), and evaluated model performance.
+    *   Utilized Python (NLTK, Scikit-learn) for data analysis and model building, and presented findings through a comprehensive report and presentation.
+    *   Contributed to project planning, data collection, model development, and results interpretation.
+
+**Work Experience**
+
+*   **Data Analyst Intern | TechSolutions Ltd, Basingstoke | June 2022 – August 2022**
+    *   Assisted senior data analysts in collecting, cleaning, and analyzing large datasets to support business decision-making.
+    *   Developed SQL queries to extract data from relational databases and generate reports on key performance indicators (KPIs).
+    *   Created data visualizations using Power BI to communicate insights to stakeholders and identify areas for improvement.
+    *   Gained practical experience in data analysis, reporting, and data visualization within a fast-paced business environment.
+*   **IT Support Assistant | County Council, Winchester | July 2021 – August 2021**
+    * Provided first-line technical support to council employees, resolving hardware and software issues.
+    * Maintained accurate records of support requests and resolutions using a ticketing system.
+    * Assisted in the setup and maintenance of IT infrastructure, including computers, printers, and network devices.
+
+**Awards and Recognition**
+
+*   Dean's List, University of Bath (2021, 2022, 2023)
+*   University of Bath Computer Science Department Award for Project Excellence (2023)
+
+**References**
+
+Available upon request.

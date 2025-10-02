@@ -1,0 +1,69 @@
+**Ann Duarte**
+NP2 4AQ | 07700 900123 | ann.duarte@email.com | [LinkedIn Profile URL - Optional]
+
+**Summary**
+
+Highly motivated and analytical recent graduate with a strong foundation in data management, database systems, and programming. Eager to apply acquired skills and contribute to a data-driven environment as a Junior Data Engineer. Proven ability to learn quickly, work independently and collaboratively, and deliver high-quality results under pressure. Seeking a challenging role where I can develop my expertise and contribute to innovative data solutions.
+
+**Education**
+
+*   **University of Winchester** | Winchester, Hampshire | BSc (Hons) Computer Science | September 2020 – June 2023
+    *   Grade: 2:1
+    *   Relevant Modules: Database Design and Management, Data Structures and Algorithms, Machine Learning, Data Mining, Big Data Analytics, Cloud Computing.
+    *   Dissertation: "Comparative Analysis of NoSQL Database Performance for Real-Time Data Ingestion."
+
+*   **Haberdashers' Monmouth School for Girls** | Monmouth, Monmouthshire | September 2013 – June 2020
+    *   A-Levels: Mathematics (A), Computer Science (A), Physics (B)
+    *   GCSEs: 9 GCSEs at Grades A*-C, including Mathematics (A*) and English (A).
+
+**Technical Skills**
+
+*   **Programming Languages:** Python (Proficient), SQL (Expert), Java (Intermediate), R (Basic)
+*   **Databases:** MySQL, PostgreSQL, MongoDB, Snowflake
+*   **Cloud Platforms:** AWS (Basic – EC2, S3), Azure (Basic – Azure Data Factory), Google Cloud Platform (Basic)
+*   **Data Processing Tools:** Apache Spark, Apache Kafka, Pandas, NumPy, Scikit-learn
+*   **Operating Systems:** Windows, Linux
+*   **Version Control:** Git, GitHub
+*   **Data Visualization:** Tableau, Power BI
+*   **Other:** ETL processes, Data Warehousing concepts, Data Modelling, Agile methodologies
+
+**Experience**
+
+*   **Data Analyst Intern | Innovate Solutions Ltd.** | Newport, Wales | June 2022 – August 2022
+    *   Developed and maintained SQL queries to extract and transform data from various sources for reporting purposes.
+    *   Assisted in the creation of interactive dashboards using Tableau to visualise key performance indicators (KPIs) for stakeholders.
+    *   Contributed to the data cleaning and validation process, ensuring data accuracy and consistency.
+    *   Gained experience in working with large datasets and identifying data quality issues.
+
+*   **Junior Developer | CodeCraft Digital** | Cardiff, Wales | July 2021 – August 2021
+    *   Assisted senior developers in building and testing data pipelines using Python and Apache Spark.
+    *   Participated in code reviews and contributed to improving code quality and maintainability.
+    *   Worked with various data formats, including JSON and CSV.
+    *   Learned about data engineering best practices and the importance of data governance.
+
+**Projects**
+
+*   **Customer Churn Prediction Model** | Personal Project | January 2023 – March 2023
+    *   Developed a machine learning model to predict customer churn using Python, Pandas, and Scikit-learn.
+    *   Collected and pre-processed customer data from a publicly available dataset.
+    *   Evaluated the performance of different machine learning algorithms and selected the best-performing model.
+    *   Presented the findings in a comprehensive report, including data visualization and insights.
+    *   Hosted the model on a free cloud service.
+
+*   **Data Pipeline for E-commerce Website** | University Coursework | October 2022 – December 2022
+    *   Designed and implemented a data pipeline to extract, transform, and load (ETL) data from an e-commerce website into a data warehouse.
+    *   Utilized Apache Kafka for real-time data ingestion and Apache Spark for data processing.
+    *   Developed SQL queries to transform and aggregate data for reporting and analysis.
+
+**Awards and Certifications**
+
+*   Dean's List | University of Winchester | 2021, 2022
+*   [Optional: Completion of relevant online courses, e.g., DataCamp, Coursera, edX]
+
+**Interests**
+
+*   Open-source data science projects, learning new programming languages and data engineering tools, hiking, coding meetups.
+
+**References**
+
+Available upon request.

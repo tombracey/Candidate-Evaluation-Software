@@ -1,0 +1,58 @@
+**Dawn Brown**
+YO6 5RS | 07700 900872 | dawn.brown.data@email.com
+
+**Summary**
+
+A highly motivated and analytically driven graduate with a BSc in Mathematics from the **University of Bath**, seeking a Junior Data Engineer role. Possessing a strong foundation in statistical modelling, data manipulation, and programming, coupled with hands-on experience in building and maintaining data pipelines. Eager to contribute to a dynamic team and leverage technical skills to drive data-informed decision-making. Proven ability to learn quickly, solve complex problems, and collaborate effectively within a team environment.
+
+**Education**
+
+*   **University of Bath, Bath** | BSc Mathematics | September 2019 – June 2022
+    *   First Class Honours
+    *   Dissertation: "Predictive Modelling of Customer Churn using Machine Learning Techniques" - Achieved 82%
+    *   Relevant Modules: Statistical Modelling, Data Analysis, Database Systems, Programming (Python, SQL), Machine Learning.
+
+*   **Pocklington School, Pocklington** | A-Levels | September 2017 – June 2019
+    *   Mathematics (A*), Further Mathematics (A), Physics (A)
+
+**Experience**
+
+*   **Data Engineering Intern | Quantex Analytics, York** | June 2021 – August 2021
+    *   Assisted in the development and maintenance of ETL pipelines using Python and Apache Airflow.
+    *   Designed and implemented data validation processes to ensure data quality and integrity.
+    *   Contributed to the migration of data from legacy systems to a cloud-based data warehouse (AWS Redshift).
+    *   Improved pipeline efficiency by 15% through optimizing SQL queries and data partitioning strategies.
+    *   Collaborated with senior data engineers to troubleshoot and resolve data pipeline issues.
+
+*   **Analytics Assistant (Part-time) | Ebor Insights Ltd, York** | October 2020 – May 2021
+    *   Extracted, cleaned, and transformed data from various sources (CSV, APIs, databases) using Python (Pandas, NumPy).
+    *   Performed exploratory data analysis to identify trends and patterns in customer behaviour.
+    *   Created interactive dashboards using Tableau to visualise key performance indicators (KPIs) for stakeholders.
+    *   Developed and maintained documentation for data processing workflows and reporting procedures.
+
+**Skills**
+
+*   **Programming Languages:** Python (Pandas, NumPy, Scikit-learn), SQL, R (Basic)
+*   **Data Engineering Tools:** Apache Airflow, AWS Redshift, Docker, Git
+*   **Databases:** PostgreSQL, MySQL, MongoDB (Basic)
+*   **Data Visualisation:** Tableau, Matplotlib, Seaborn
+*   **Statistical Modelling:** Regression Analysis, Hypothesis Testing, Time Series Analysis
+*   **Cloud Technologies:** AWS (Basic understanding of EC2, S3)
+*   **Operating Systems:** Windows, Linux, macOS
+*   **Other:** Data Cleaning, Data Wrangling, ETL Processes, Data Warehousing, Version Control
+
+**Projects**
+
+*   **Customer Churn Prediction Model:** Developed a machine learning model using Python and Scikit-learn to predict customer churn for a telecommunications company. Achieved an accuracy of 85% on a held-out test dataset. (Code available on request)
+*   **Web Scraping and Data Analysis of Real Estate Prices:** Built a web scraper using Python (Beautiful Soup) to collect data on property prices from various online sources. Performed data analysis using Pandas and visualised the results using Matplotlib to identify trends in the housing market. (Code available on request)
+*   **Personal Finance Tracker:** Created a Python application to track personal income and expenses. The application uses a SQLite database to store transaction data and provides interactive charts and reports to visualise spending patterns. (Code available on request)
+
+**Awards & Achievements**
+
+*   Dean's List, University of Bath (2020, 2021, 2022)
+*   University of Bath Mathematics Society - Treasurer (2020-2021)
+*   Pocklington School Academic Excellence Award (2018, 2019)
+
+**References**
+
+Available upon request.

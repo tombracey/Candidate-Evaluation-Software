@@ -1,19 +1,35 @@
-| name               |   experience |   qualifications | location       |   Overall Suitability |
-|:-------------------|-------------:|-----------------:|:---------------|----------------------:|
-| Veronica Ramirez   |           90 |               95 | EH4 3HY        |                    92 |
-| Jonathan Phillips  |           85 |               95 | CB10 2EE       |                    90 |
-| Tom Bracey         |           90 |               90 | Ealing, London |                    90 |
-| David Young        |           85 |               90 | LE11 0PL       |                    88 |
-| Thomas Lutz        |           75 |               85 | AL1 1DT        |                    80 |
-| Kevin Powers       |           70 |               80 | BS 4YZ         |                    75 |
-| Andrew Bailey      |           55 |               50 | WR11 5PU       |                    52 |
-| Jennifer Dennis    |           50 |               55 | CB6 2EE        |                    52 |
-| Joy Miller         |           45 |               55 | SE1 20ST       |                    50 |
-| Pamela Valdez      |           40 |               50 | IP26 4JR       |                    45 |
-| Edward Moreno, DDS |           40 |               50 | S21 4NE        |                    45 |
-| Bom Tracey         |           30 |               35 | London         |                    32 |
-| Michelle Blackburn |           20 |               10 | RH2 0FP        |                    15 |
-| James Jones        |           20 |               10 | KA18 3HU       |                    15 |
-| Catherine Elliott  |           20 |               10 | W2 2QS         |                    15 |
-| Manuel Paul        |           15 |                5 | JE2 4YP        |                    10 |
-| Julie Holt         |           15 |                5 | BS106PD        |                    10 |
+| Name               |   Experience |   Qualifications |   Overall Suitability |
+|:-------------------|-------------:|-----------------:|----------------------:|
+| David Young        |           85 |               90 |                    88 |
+| Veronica Ramirez   |           80 |               95 |                    88 |
+| Jonathan Phillips  |           85 |               92 |                    88 |
+| Ann Duarte         |           80 |               90 |                    85 |
+| Dawn Brown         |           80 |               90 |                    85 |
+| Thomas Lutz        |           80 |               88 |                    84 |
+| Frank Booker       |           75 |               85 |                    80 |
+| Kevin Powers       |           78 |               82 |                    80 |
+| Tom Bracey         |           75 |               85 |                    80 |
+| Douglas English    |           70 |               80 |                    75 |
+| Kendra Taylor      |           55 |               60 |                    58 |
+| Joshua Duncan      |           50 |               55 |                    52 |
+| Bom Tracey         |           45 |               50 |                    48 |
+| Jennifer Dennis    |           45 |               50 |                    48 |
+| Mark Andrews       |           40 |               50 |                    45 |
+| Andrew Bailey      |           40 |               35 |                    38 |
+| Brandy Miller      |           30 |               45 |                    38 |
+| Pamela Valdez      |           35 |               40 |                    38 |
+| Joy Miller         |           30 |               40 |                    35 |
+| Patrick Cortez     |           20 |               35 |                    28 |
+| Edward Moreno      |           20 |               30 |                    25 |
+| Sherry Munoz       |           20 |               25 |                    22 |
+| Jared Roberts      |           15 |               15 |                    15 |
+| Daniel Brown       |           15 |               10 |                    12 |
+| Virginia Escobar   |           10 |               10 |                    10 |
+| Alexander Garcia   |           10 |                5 |                     8 |
+| Michelle Blackburn |           10 |                5 |                     8 |
+| Bradley Acevedo    |            5 |                5 |                     5 |
+| Bobby Anderson     |            5 |                5 |                     5 |
+| James Jones        |            5 |                5 |                     5 |
+| Julie Holt         |            5 |                2 |                     4 |
+| Catherine Elliott  |            5 |                3 |                     4 |
+| Manuel Paul        |            3 |                2 |                     2 |

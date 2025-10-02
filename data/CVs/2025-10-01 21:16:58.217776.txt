@@ -1,0 +1,43 @@
+**Patrick Cortez**
+LE8 3NJ | 07700 900123 | patrick.cortez@email.com
+
+**Summary**
+
+Enthusiastic and eager graduate with a basic understanding of data analysis principles and some experience with Python and SQL. Seeking a Junior Data Engineer role to contribute to a team and further develop technical skills in a practical setting.
+
+**Education**
+
+*   **The Lancaster Academy, Leicester** | September 2014 – June 2019
+    *   GCSEs: Achieved 5 GCSEs at grades A-C, including Maths and English.
+*   **De Montfort University, Leicester** | September 2019 – June 2022
+    *   BSc (Hons) in Information Technology - *2:2*
+
+**Experience**
+
+*   **TechSolutions Ltd, Leicester** | *IT Support Assistant* | July 2022 – December 2022
+    *   Provided first-line IT support to internal staff, resolving basic hardware and software issues.
+    *   Maintained records of support requests and resolutions using a ticketing system.
+    *   Assisted with the installation and configuration of new computer equipment.
+
+*   **RetailAssist, Leicester** | *Sales Assistant* | June 2020 – August 2020 (Summer Internship)
+    *   Provided customer service and assisted with sales transactions.
+    *   Maintained stock levels and ensured product displays were well-presented.
+    *   Gained experience working in a fast-paced environment.
+
+**Skills**
+
+*   **Programming:** Python (Basic), SQL (Basic)
+*   **Software:** Microsoft Office Suite (Word, Excel, PowerPoint), Windows Operating Systems
+*   **Data Tools:** Familiar with Jupyter Notebook
+*   **Other:** Communication, Teamwork, Problem-solving
+
+**Projects**
+
+*   **Simple Data Analysis Project (University)**
+    *   Used Python to analyze a small publicly available dataset on student performance.
+    *   Performed basic data cleaning and created simple visualizations.
+    *   *Note: Code available upon request.*
+
+**References**
+
+Available upon request.

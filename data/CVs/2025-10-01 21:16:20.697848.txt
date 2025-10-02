@@ -1,0 +1,45 @@
+**Sherry Munoz**
+BA4 4SP | 07700 900800 | sherry.munoz@email.com
+
+**Summary**
+
+Enthusiastic and eager to learn individual with some experience in data handling and analysis. Seeking a Junior Data Engineer role to develop skills and contribute to a data-driven environment. Basic understanding of SQL and Python.
+
+**Education**
+
+*   **Somerset Comprehensive School, Shepton Mallet** - GCSEs (2016 - 2021)
+    *   English Language: C
+    *   Mathematics: D
+    *   Science: C
+    *   ICT: B
+    *   Geography: C
+*   **(Self-Study)** - Python for Data Analysis Nanodegree (Udacity) - In Progress
+
+**Experience**
+
+*   **Data Entry Clerk, Mendip Business Solutions, Shepton Mallet (Part-Time)** - June 2022 – Present
+    *   Accurately entered customer data into the company database.
+    *   Maintained and updated existing customer records.
+    *   Assisted with basic data cleaning tasks using Excel.
+
+*   **Shop Assistant, Budgens, Evercreech (Part-Time)** - September 2021 – June 2022
+    *   Provided customer service and processed transactions.
+    *   Stocked shelves and maintained store cleanliness.
+    *   Handled cash and card payments.
+
+**Skills**
+
+*   **Data Entry:** Proficient in accurate data input and record maintenance.
+*   **Software:** Microsoft Excel (Basic Formulas, Data Entry), SQL (Basic Queries), Python (Basic Syntax, Pandas).
+*   **Languages:** English (Native)
+*   **Other:** Customer Service, Teamwork, Communication Skills.
+
+**Projects**
+
+*   **Basic Sales Data Analysis (Personal Project)**
+    *   Used Python (Pandas) to analyze a sample sales dataset, identifying trends and generating simple visualizations.
+    *   Utilized Excel for data cleaning and preliminary analysis. (Code available on request)
+
+**References**
+
+Available on request.
