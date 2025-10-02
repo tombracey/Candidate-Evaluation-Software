@@ -149,23 +149,3 @@ def get_CV_paths():
             filepath = os.path.join(CVs_path, filename)
             CVs.append(filepath)
     return CVs
-
-
-if __name__ == "__main__":
-    # Define test inputs
-    pool = get_CV_paths()  # Use the get_CV_paths function to get CV file paths
-    role = "Data Engineer"
-    location = True
-    description = "Looking for a skilled data engineer."
-    cv_employer_address = "EC1A 1BB"
-
-    # Run the evaluate_all_CVs function and print the result
-    result = asyncio.run(evaluate_all_CVs(
-        pool=pool,
-        role=role,
-        location=location,
-        description=description,
-        cv_employer_address=cv_employer_address
-    ))
-    print("Evaluation Results:")
-    print(result)

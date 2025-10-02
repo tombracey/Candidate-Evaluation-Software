@@ -88,7 +88,7 @@ function App() {
         const parsedResults = typeof data.data === "string" ? JSON.parse(data.data) : data.data;
         setResults(Array.isArray(parsedResults) ? parsedResults : []);
       } else {
-        setError(data.error || "An unknown error occurred.");
+        setError(data.detail || "An unknown error occurred.");
       }
     } catch (err) {
       setError(`Failed to communicate with backend: ${err.message}`);

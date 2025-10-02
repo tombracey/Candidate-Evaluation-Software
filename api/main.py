@@ -39,8 +39,10 @@ async def evaluate_table_endpoint(request: EvaluateTableRequest):
             metrics=request.metrics
         )
         return {"ok": True, "data": result}
+    except HTTPException as e:
+        raise e
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/evaluate_all_CVs/")
 async def evaluate_all_CVs_endpoint(request: EvaluateAllCVsRequest):
@@ -54,8 +56,10 @@ async def evaluate_all_CVs_endpoint(request: EvaluateAllCVsRequest):
             api_key=request.google_api_key
         )
         return {"ok": True, "data": result}
+    except HTTPException as e:
+        raise e
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
     
 app.add_middleware(
     CORSMiddleware,
