@@ -44,7 +44,7 @@ async def evaluate_table(path, find_travel_time=False, travel_weight=0.35, emplo
                 return None
 
         travel_times = await asyncio.gather(*[fetch_travel_time(addr) for addr in df[candidate_address_column]])
-        log_google_maps_usage(len(df[candidate_address_column]))
+        # log_google_maps_usage(len(df[candidate_address_column]))
 
         df['Travel Time (mins)'] = travel_times
         df = df.sort_values(by='Travel Time (mins)')
@@ -66,5 +66,4 @@ async def evaluate_table(path, find_travel_time=False, travel_weight=0.35, emplo
         df['Overall Score'] = ((weighted_sum - min_score) / (max_score - min_score) * 100).round()
         df = df.sort_values(by='Overall Score', ascending=False)
         
-    df.to_markdown('./data/output/spreadsheet_evaluation.md', index=False)
     return df.to_json(orient='records', indent=4)

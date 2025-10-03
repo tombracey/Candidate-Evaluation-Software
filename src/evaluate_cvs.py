@@ -96,7 +96,7 @@ async def evaluate_all_CVs(pool: list, role: str, location=True, description: st
     Returns results as a JSON string.
     """
     num_of_requests = math.ceil(len(pool)/ 10)
-    log_gemini_usage(num_of_requests)
+    # log_gemini_usage(num_of_requests)
 
     all_results = []
 
@@ -135,7 +135,6 @@ async def evaluate_all_CVs(pool: list, role: str, location=True, description: st
         results_df = results_df[columns]
 
     results_df = results_df.sort_values(by="Overall Suitability", ascending=False)
-    results_df.to_markdown('./data/output/CV_evaluation.md', index=False)
     result_json = results_df.to_json(orient='records', indent=4)
     return result_json
 
