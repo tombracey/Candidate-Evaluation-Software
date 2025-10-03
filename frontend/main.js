@@ -11,12 +11,12 @@ app.on("ready", () => {
     },
   });
 
-  mainWindow.loadURL("http://localhost:3000");
-  // Uncomment for production:
-  // mainWindow.loadFile(path.join(__dirname, "react-app/build/index.html"));
-
-  // Open DevTools for debugging (optional)
-  mainWindow.webContents.openDevTools();
+  if (process.env.NODE_ENV === "development") {
+    mainWindow.loadURL("http://localhost:3000");
+    mainWindow.webContents.openDevTools();
+  } else {
+    mainWindow.loadFile(path.join(__dirname, "react-app/build/index.html"));
+  }
 });
 
 app.on("window-all-closed", () => {
