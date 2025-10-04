@@ -5,6 +5,15 @@
   "scripts": {
     "start": "electron ."
   },
+  "files": [
+    "react-app/build/**/*"
+  ],
+  "extraResources": [
+    {
+      "from": "dist/backend",
+      "to": "dist/backend"
+    }
+  ],
   "devDependencies": {
     "electron": "^30.5.1"
   }
