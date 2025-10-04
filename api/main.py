@@ -4,8 +4,13 @@ from src.evaluate_tables import evaluate_table
 from src.evaluate_cvs import evaluate_all_CVs
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Optional
+import uvicorn
+import logging
 
 app = FastAPI()
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Request models
 class EvaluateTableRequest(BaseModel):
@@ -68,3 +73,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+if __name__ == "__main__":
+    logger.info("Starting backend...")
+    uvicorn.run("api.main:app", host="127.0.0.1", port=8000, log_level="info")
