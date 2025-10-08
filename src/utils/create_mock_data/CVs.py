@@ -7,7 +7,7 @@ from src.utils.gemini import gemini
 def generate_mock_CVs(num=1, role=None):
     fake = Faker()
     
-    quality_options = ["outstanding", "strong", "mediocre", "below average", "an unsuitable CV", "comically bad"]
+    quality_options = ["outstanding", "strong", "mediocre", "below average", "" "an unsuitable CV", "comically bad"]
     
     for _ in range(num):
         name = fake.name()
@@ -26,7 +26,8 @@ def generate_mock_CVs(num=1, role=None):
 
         CV = gemini(prompt)
         save_path = f"./data/CVs/{datetime.now()}.txt"
+        save_path = save_path.replace(":", "-").replace(" ", "_")
         with open(save_path, 'w') as f:
             f.write(CV)
 
-generate_mock_CVs(4, "Junior Data Engineer")
+generate_mock_CVs(20, "Software Engineer")

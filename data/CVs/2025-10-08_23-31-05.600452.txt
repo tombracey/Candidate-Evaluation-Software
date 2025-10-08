@@ -1,0 +1,68 @@
+**Ashlee Chaney**
+BS6 7DH | 07700 900123 | ashlee.chaney@email.com | linkedin.com/in/ashleechaney
+
+**Summary**
+
+Highly motivated and results-oriented Software Engineer with 3+ years of experience in developing, testing, and deploying scalable and efficient software solutions. Proven ability to collaborate effectively within agile teams to deliver high-quality products that meet and exceed client expectations. Passionate about leveraging cutting-edge technologies to solve complex problems and contribute to innovative projects. Eager to contribute to a dynamic and challenging environment where I can continue to learn and grow.
+
+**Skills**
+
+*   **Programming Languages:** Python (Proficient), Java (Proficient), JavaScript (Intermediate), C++ (Basic)
+*   **Frameworks/Libraries:** React, Node.js, Django, Spring Boot, JUnit, Jest
+*   **Databases:** PostgreSQL, MySQL, MongoDB, Redis
+*   **Cloud Technologies:** AWS (EC2, S3, Lambda), Docker, Kubernetes
+*   **DevOps:** CI/CD, Jenkins, Git, Docker, Terraform
+*   **Operating Systems:** Linux, Windows, macOS
+*   **Agile Methodologies:** Scrum, Kanban
+*   **Testing:** Unit Testing, Integration Testing, End-to-End Testing
+*   **Other:** Data Structures and Algorithms, Object-Oriented Programming (OOP), RESTful APIs
+
+**Experience**
+
+**Software Engineer** | **Innovate Solutions Ltd.** | Bristol, UK | June 2021 – Present
+
+*   Led the development and implementation of a new feature for the company's flagship SaaS product, resulting in a 20% increase in user engagement.
+*   Developed and maintained RESTful APIs using Python (Django) and PostgreSQL, ensuring high performance and scalability.
+*   Implemented automated testing strategies (Unit, Integration, E2E) using pytest and Cypress.io, reducing bug count by 15%.
+*   Deployed and managed applications on AWS using Docker and Kubernetes, optimizing resource utilization and reducing operational costs by 10%.
+*   Collaborated closely with product managers, designers, and other engineers in an Agile environment to deliver high-quality software on time and within budget.
+*   Mentored junior engineers, providing guidance and support on technical challenges.
+*   Improved CI/CD pipeline through the incorporation of Terraform, streamlining deployments and significantly reducing errors.
+
+**Junior Software Developer** | **Apex Digital Services** | Bath, UK | July 2020 – June 2021
+
+*   Contributed to the development of a web application using Java (Spring Boot) and React, participating in all phases of the software development lifecycle.
+*   Assisted in designing and implementing database schemas using MySQL.
+*   Wrote unit tests and performed code reviews to ensure code quality and maintainability.
+*   Gained experience with Agile development methodologies and participated in daily stand-up meetings.
+*   Assisted in debugging and troubleshooting production issues.
+*   Learned valuable skills for working as part of a high performance team.
+
+**Education**
+
+**University of the West of Scotland** | Paisley, UK | September 2017 – June 2020
+
+*   BSc (Hons) Computer Science | First Class Honours
+*   Dissertation: "A Scalable Machine Learning Model for Predicting Customer Churn"
+
+**Projects**
+
+**Personal Portfolio Website** | [Available on Request]
+
+*   Developed a personal portfolio website using React, showcasing my skills and projects.
+*   Implemented responsive design principles to ensure optimal viewing experience across different devices.
+*   Deployed the website on Netlify using CI/CD pipelines.
+
+**Open Source Contribution: Django REST Framework** | [Available on Request]
+
+*   Contributed to the Django REST Framework project by fixing a bug related to API authentication.
+*   Improved the documentation by adding clarifications on complex use cases.
+
+**Awards and Recognition**
+
+*   Dean's List, University of the West of Scotland, 2018, 2019, 2020
+*   Innovate Solutions Ltd. - Employee of the Month, December 2022
+
+**References**
+
+Available upon request.

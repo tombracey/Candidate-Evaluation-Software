@@ -1,0 +1,38 @@
+**Emily Green**
+CH48 6WB | 07700 900321 | emily.green42@email.com
+
+**Summary**
+
+Enthusiastic and eager to learn individual with a foundational understanding of software development principles. Some experience in coding through academic projects and limited professional exposure. Seeking an entry-level Software Engineer position to develop my skills and contribute to a team.
+
+**Education**
+
+*   **University of Chester Academy Ellesmere Port** | Ellesmere Port | September 2015 - June 2020
+    *   A-Levels: Mathematics (C), Computer Science (D), Physics (E)
+    *   GCSEs: 8 GCSEs including Maths (B) and English (C)
+
+**Experience**
+
+*   **IT Support Assistant** | Tech Solutions Ltd | Chester | July 2021 - August 2022 (Seasonal)
+    *   Provided first-line technical support to internal staff, resolving basic hardware and software issues.
+    *   Assisted with the setup and maintenance of computer systems and peripherals.
+    *   Documented support requests and resolutions in a ticketing system.
+*   **Shop Assistant** | Retail Ready | Chester | September 2020 - June 2021
+    *   Provided customer service and handled transactions at the till.
+    *   Assisted with stock management and store maintenance.
+
+**Skills**
+
+*   **Programming Languages:** Basic knowledge of Python and Java.
+*   **Operating Systems:** Familiar with Windows and Linux.
+*   **Software:** Microsoft Office Suite.
+*   **Other:** Basic understanding of HTML and CSS. Some experience with Git version control.
+
+**Projects**
+
+*   **Simple Calculator (Python)** | Personal Project | 2021
+    *   Developed a basic calculator application using Python.
+
+**References**
+
+Available upon request.

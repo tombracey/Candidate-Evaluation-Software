@@ -1,0 +1,51 @@
+**Courtney Benjamin**
+WA1 4EL | 07700 900123 | courtney.benjamin89@email.com
+
+**Summary**
+
+Enthusiastic and eager software engineering graduate with some experience in developing and testing software applications. Possesses a basic understanding of programming principles and a desire to learn and contribute to a team. Looking for a junior software engineer role where I can improve my skills.
+
+**Education**
+
+*   **University of Chester** - Chester, UK
+    *   BSc (Hons) Computer Science - September 2018 – June 2021
+    *   Grade: 2:2
+    *   Relevant Coursework: Object-Oriented Programming, Data Structures and Algorithms, Database Management, Software Engineering.
+
+*   **Lymm High School** - Lymm, UK
+    *   A-Levels: Mathematics (C), Physics (D), Computing (C) - September 2016 – June 2018
+    *   GCSEs: 9 GCSEs including Maths (B) and English (C) - September 2014 – June 2016
+
+**Experience**
+
+*   **Software Testing Intern** – TechSolutions Ltd - Warrington, UK
+    *   June 2020 – August 2020
+    *   Conducted manual testing of web applications based on test plans.
+    *   Reported bugs and issues to developers using Jira.
+    *   Created test scripts (basic).
+
+*   **Shop Assistant** – Bargain Buys - Warrington, UK
+    *   June 2016 – August 2018 (Part-time)
+    *   Provided customer service and handled cash transactions.
+    *   Maintained store appearance and restocked shelves.
+
+**Skills**
+
+*   Programming Languages: Java (Basic), Python (Familiar)
+*   Databases: SQL (Basic)
+*   Tools: Git, Jira (Basic)
+*   Operating Systems: Windows, Linux (Basic)
+*   Microsoft Office Suite
+
+**Projects**
+
+*   **University Project: Simple Inventory Management System (Java)**
+    *   Developed a command-line inventory management system using Java.
+    *   Implemented basic CRUD (Create, Read, Update, Delete) operations.
+    *   Used a text file for data storage.
+
+**Interests**
+
+*   Gaming
+*   Reading (Fantasy)
+*   Watching Movies

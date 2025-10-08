@@ -1,0 +1,39 @@
+**Angela Burns**
+DL12 0AL | 07700 900321 | angela.burns@email.com
+
+**Summary**
+
+Enthusiastic and eager individual with some experience in software development, seeking an entry-level Software Engineer position to further develop skills and contribute to a dynamic team. Basic knowledge of Java and Python.
+
+**Education**
+
+*   **Barnard Castle School, Barnard Castle** - A-Levels: Maths (C), Physics (D), Computer Science (E) (2016-2018)
+*   **Northumbria University, Newcastle upon Tyne** - BSc (Hons) Computing Science (2:2) (2018-2021)
+
+**Experience**
+
+*   **Junior IT Support Technician, Tees Valley Solutions, Middlesbrough (Summer Placement - 3 Months)** (June 2019 – August 2019)
+    *   Provided basic IT support to internal staff, including troubleshooting hardware and software issues.
+    *   Assisted with the installation and configuration of new computers and software.
+    *   Maintained a log of IT issues and their resolutions.
+
+*   **Checkout Assistant, Co-op Food, Barnard Castle (Part-Time)** (September 2021 – Present)
+    *   Providing customer service on the till.
+    *   Handling cash and card transactions.
+    *   Stocking shelves and maintaining store cleanliness.
+
+**Skills**
+
+*   **Programming Languages:** Java (Basic), Python (Basic)
+*   **Operating Systems:** Windows, Linux (Basic)
+*   **Software:** Microsoft Office Suite
+*   **Other:** Basic understanding of databases, some experience with HTML and CSS.
+
+**Projects**
+
+*   **Simple Calculator (University Project):** Developed a basic calculator application using Java. (Grade: C)
+*   **Personal Website (Self-Initiated):** Created a simple personal website using HTML and CSS. (Currently offline).
+
+**References**
+
+Available upon request.

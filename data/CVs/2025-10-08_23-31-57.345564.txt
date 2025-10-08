@@ -1,0 +1,79 @@
+**Benjamin King**
+RH2 9DT | +44 7700 900218 | benjamin.king@emaildomain.co.uk | linkedin.com/in/benjaminking-software
+
+**Summary**
+
+A highly motivated and results-oriented Software Engineer with 3+ years of experience in designing, developing, and deploying scalable and maintainable software solutions. Proven ability to work both independently and collaboratively within Agile development environments. Passionate about leveraging cutting-edge technologies to create innovative and impactful applications. Strong problem-solving skills and a commitment to continuous learning and professional growth. Seeking a challenging Software Engineer role at a forward-thinking company where I can contribute to impactful projects and further develop my technical expertise.
+
+**Skills**
+
+*   **Programming Languages:** Python (Proficient), Java (Experienced), JavaScript (Experienced), C++ (Familiar), Go (Beginner)
+*   **Frameworks/Libraries:** React, Node.js, Spring Boot, Django, TensorFlow, PyTorch, JUnit, Jest
+*   **Databases:** PostgreSQL, MySQL, MongoDB, Redis
+*   **Cloud Computing:** AWS (EC2, S3, Lambda, DynamoDB), Azure (Basic), Google Cloud Platform (Basic)
+*   **DevOps:** Docker, Kubernetes, CI/CD (Jenkins, GitLab CI), Terraform (Basic)
+*   **Operating Systems:** Linux (Ubuntu, Debian), macOS, Windows
+*   **Version Control:** Git (GitHub, GitLab, Bitbucket)
+*   **Agile Methodologies:** Scrum, Kanban
+*   **Testing:** Unit Testing, Integration Testing, End-to-End Testing
+
+**Experience**
+
+**Software Engineer | Innovate Solutions Ltd | London | June 2021 – Present**
+
+*   Designed and developed RESTful APIs using Spring Boot and Java, resulting in a 20% improvement in application performance.
+*   Implemented a microservices architecture using Docker and Kubernetes, enhancing scalability and resilience.
+*   Led the development of a new feature for the company's flagship product, resulting in a 15% increase in user engagement.
+*   Automated deployment processes using Jenkins and GitLab CI, reducing deployment time by 40%.
+*   Collaborated with cross-functional teams (Product, QA, UX) to deliver high-quality software solutions on time and within budget.
+*   Mentored junior engineers, providing guidance and support on technical challenges.
+*   Utilized AWS services such as EC2, S3, and Lambda to build and deploy cloud-based applications.
+*   Proactively identified and resolved critical bugs and performance bottlenecks in production environments.
+
+**Junior Software Developer | Apex Technologies Group | Manchester | July 2020 – June 2021**
+
+*   Contributed to the development of a web application using React and Node.js.
+*   Wrote unit and integration tests using Jest to ensure code quality and reliability.
+*   Participated in code reviews to identify and address potential issues.
+*   Assisted in the deployment of applications to production environments.
+*   Gained experience working in an Agile development environment using Scrum.
+*   Learned and applied best practices for software development and testing.
+
+**Education**
+
+**University of York | York | BSc (Hons) Computer Science | 2017 – 2020**
+
+*   First-Class Honours
+*   Dissertation: "Optimizing Machine Learning Algorithms for Real-Time Image Recognition"
+*   Relevant Coursework: Data Structures and Algorithms, Software Engineering, Database Systems, Artificial Intelligence, Computer Networks
+
+**St. Bede's School | Redhill | A-Levels | 2015 - 2017**
+
+*   Mathematics (A*)
+*   Physics (A)
+*   Computer Science (A)
+
+**Projects**
+
+**Personal Portfolio Website (React, Node.js, AWS S3) | 2023**
+
+*   Developed a personal portfolio website to showcase my skills and projects.
+*   Utilized React for the front-end and Node.js for the back-end.
+*   Deployed the website to AWS S3 for hosting.
+*   Implemented a responsive design for optimal viewing on all devices.
+
+**Machine Learning Image Classifier (Python, TensorFlow) | 2022**
+
+*   Built a machine learning image classifier using Python and TensorFlow.
+*   Trained the model on a large dataset of images.
+*   Achieved a high level of accuracy in classifying images.
+*   Deployed the model as a web application using Flask.
+
+**Awards & Recognition**
+
+*   Dean's List, University of York (2018, 2019, 2020)
+*   Innovate Solutions Ltd, Employee of the Quarter (Q3 2022)
+
+**References**
+
+Available upon request.

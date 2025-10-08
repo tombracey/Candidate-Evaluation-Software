@@ -1,0 +1,46 @@
+**James Rosales**
+NE32 4JN | 07700 900321 | james.rosales78@email.com
+
+**Summary**
+
+A highly motivated and enthusiastic graduate with a BSc in Computer Science and limited professional experience seeking a challenging Software Engineer role where I can apply my knowledge and continue to develop my skills. Eager to contribute to a team and learn from experienced professionals.
+
+**Education**
+
+*   **University of Sunderland** | BSc Computer Science | 2020 - 2023
+    *   Relevant Modules: Data Structures and Algorithms, Object-Oriented Programming, Database Management Systems, Software Engineering Principles.
+    *   Grade: 2:2
+
+*   **South Shields Community School** | 2013 - 2020
+    *   A-Levels: Mathematics (C), Physics (D), Computer Science (E)
+    *   GCSEs: 8 GCSEs including Maths (B) and English (C).
+
+**Experience**
+
+*   **Tech Solutions Ltd** | IT Support Intern | July 2022 - August 2022 (1 month)
+    *   Provided basic technical support to company employees.
+    *   Assisted in troubleshooting hardware and software issues.
+    *   Maintained the IT helpdesk ticketing system.
+
+*   **Freelance Web Development** | Occasional | 2021 - Present
+    *   Developed simple websites for local businesses and individuals (e.g., a basic portfolio site for a photographer).
+    *   Used HTML, CSS, and JavaScript.
+
+**Skills**
+
+*   **Programming Languages:** Java (basic), Python (basic), C++ (limited).
+*   **Web Development:** HTML, CSS, JavaScript (basic).
+*   **Databases:** MySQL (basic).
+*   **Operating Systems:** Windows, Linux (familiar).
+*   **Software:** Microsoft Office Suite.
+*   **Other:** Problem-solving, communication, teamwork.
+
+**Projects**
+
+*   **University Project: Library Management System** (Java)
+    *   Developed a basic library management system as part of a group project.
+    *   Implemented features such as book cataloging, user registration, and book borrowing.
+
+**References**
+
+Available upon request.

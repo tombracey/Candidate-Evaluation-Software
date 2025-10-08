@@ -1,0 +1,61 @@
+**Matthew Nguyen**
+HP20 1NU | 07700 900123 | matthew.nguyen@email.com | linkedin.com/in/matthewnguyen-software
+
+**Summary**
+
+Highly motivated and results-oriented Software Engineer with 3+ years of experience in developing and deploying scalable, high-performance applications. Proven ability to collaborate effectively within agile teams, contributing to all stages of the software development lifecycle. Passionate about leveraging cutting-edge technologies to solve complex problems and deliver innovative solutions. Strong focus on clean, well-documented code and continuous learning. Seeking a challenging Software Engineer role at a forward-thinking organisation where I can contribute to impactful projects and continue to grow my technical expertise.
+
+**Education**
+
+**University of York** | York, UK
+*BSc (Hons) Computer Science* | September 2017 – June 2020
+* Grade: First Class Honours (75%)
+* Relevant Coursework: Data Structures and Algorithms, Object-Oriented Programming, Database Management Systems, Software Engineering, Artificial Intelligence, Computer Networks, Operating Systems.
+* Dissertation: "Optimising Real-Time Object Detection in Embedded Systems Using Deep Learning" – Achieved Distinction.
+
+**Dr Challoner's Grammar School** | Amersham, UK
+*A-Levels:* Mathematics (A*), Further Mathematics (A*), Physics (A), Computer Science (A) | September 2015 – June 2017
+*GCSEs:* 10 A* Grades including Mathematics, English, and Science | September 2013 – June 2015
+
+**Experience**
+
+**Software Engineer** | **Synapse Analytics Ltd.** | London, UK | July 2020 – Present
+*  Developed and maintained key features for a cloud-based data analytics platform used by major financial institutions, utilising Python (Flask, Django), AWS (Lambda, S3, EC2), and PostgreSQL.
+*  Led the design and implementation of a new REST API for data ingestion, resulting in a 30% increase in data throughput and improved system scalability.
+*  Improved the performance of a critical data processing pipeline by 20% through code optimisation and algorithm redesign, using profiling tools and performance testing methodologies.
+*  Collaborated with cross-functional teams (product, QA, DevOps) to ensure timely delivery of high-quality software releases, following Agile methodologies (Scrum).
+*  Proactively identified and resolved critical production issues, minimising system downtime and ensuring business continuity.
+*  Contributed to the development of automated testing frameworks (pytest, Selenium) to improve code quality and reduce manual testing effort.
+*  Mentored junior developers, providing technical guidance and support to foster their professional growth.
+*  Actively participated in code reviews, providing constructive feedback and ensuring adherence to coding standards.
+
+**Software Engineering Intern** | **QuantumLeap Technologies** | Cambridge, UK | June 2019 – August 2019
+*  Developed a prototype machine learning model for fraud detection using Python (scikit-learn, TensorFlow) and evaluated its performance against benchmark datasets.
+*  Assisted in the development of a web application for visualising data insights, using JavaScript (React), HTML, and CSS.
+*  Contributed to the development of unit tests and integration tests to ensure the quality and reliability of the software.
+*  Gained experience in using version control systems (Git) and collaborative development workflows (GitHub).
+
+**Skills**
+
+*   **Programming Languages:** Python (Expert), Java (Proficient), JavaScript (Proficient), C++ (Familiar), C# (Familiar)
+*   **Frameworks/Libraries:** Flask, Django, React, Node.js, Spring Boot, TensorFlow, PyTorch, scikit-learn, NumPy, Pandas
+*   **Databases:** PostgreSQL, MySQL, MongoDB, Redis
+*   **Cloud Technologies:** AWS (Lambda, S3, EC2, DynamoDB), Azure (Basic), Google Cloud Platform (Basic)
+*   **DevOps:** Docker, Kubernetes, Jenkins, CI/CD pipelines
+*   **Operating Systems:** Linux, Windows, macOS
+*   **Tools:** Git, GitHub, Jira, Confluence, VS Code, IntelliJ IDEA, PyCharm
+*   **Methodologies:** Agile (Scrum, Kanban), Waterfall
+
+**Projects**
+
+*   **Personal Portfolio Website:** Developed a personal portfolio website using React and Node.js to showcase my skills and projects. (Source code available on GitHub)
+*   **Smart Home Automation System:** Designed and implemented a smart home automation system using Raspberry Pi, Python, and IoT sensors. (Source code available on GitHub)
+
+**Awards & Recognition**
+
+*   **University of York Dean's List:** Awarded for academic excellence (Top 5% of students) – 2018, 2019, 2020.
+*   **QuantumLeap Technologies Intern of the Year:** Awarded for outstanding contributions during the internship program – 2019.
+
+**References**
+
+Available upon request.

@@ -1,0 +1,47 @@
+**Justin Mitchell**
+BD5 8XW | 07700 900900 | justin.mitchell.dev@email.com
+
+**Summary**
+
+Enthusiastic and adaptable Software Engineer with some experience in developing and maintaining software applications. Eager to contribute to a team environment and further develop skills in a challenging and rewarding role. Familiar with Java, Python, and basic web development principles. Seeking a Software Engineer position where I can learn and grow.
+
+**Education**
+
+*   **University of Central Lancashire (UCLan), Preston** – BSc (Hons) Computer Science (2:2) – September 2017 – June 2020
+    *   Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems.
+    *   Final Year Project: Developed a simple e-commerce website using Python and Django.
+
+*   **Dixons City Academy, Bradford** – September 2010 – June 2017
+    *   A-Levels: Mathematics (C), Physics (D), Computer Science (D)
+    *   GCSEs: 9 GCSEs at grades A*-C including Maths and English.
+
+**Experience**
+
+*   **Junior Developer, SoftSolutions Ltd, Leeds** – July 2020 – December 2022
+    *   Assisted senior developers in the maintenance and development of existing software applications.
+    *   Wrote and tested basic code components using Java and SQL.
+    *   Contributed to bug fixing and troubleshooting efforts.
+    *   Participated in code reviews.
+    *   Documented basic code functionality.
+
+*   **IT Support Assistant (Part-Time), Bradford City Council, Bradford** – September 2016 – June 2017
+    *   Provided basic IT support to council staff.
+    *   Troubleshooted hardware and software issues.
+    *   Assisted with the setup of new computers and peripherals.
+
+**Skills**
+
+*   **Programming Languages:** Java (Basic), Python (Basic), HTML, CSS, JavaScript (Beginner).
+*   **Databases:** SQL (Basic).
+*   **Tools:** Eclipse, IntelliJ IDEA (Familiar), Git (Basic).
+*   **Operating Systems:** Windows, Linux (Familiar).
+*   **Other:** Problem-solving, Teamwork, Communication.
+
+**Projects**
+
+*   **Simple Inventory Management System (Personal Project)** – Java
+    *   Developed a basic inventory management system using Java. (Unfinished)
+
+**References**
+
+Available upon request.

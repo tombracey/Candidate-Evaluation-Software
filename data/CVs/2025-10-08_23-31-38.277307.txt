@@ -1,0 +1,71 @@
+**Sara McBride**
+BT93 7AN | 07700 900321 | sara.mcbride@email.com | linkedin.com/in/saramcbride
+
+**Summary**
+
+A highly motivated and results-oriented Software Engineer with 3+ years of experience in developing and implementing innovative software solutions. Proven ability to work both independently and collaboratively within agile teams to deliver high-quality, scalable, and maintainable code.  Passionate about staying abreast of the latest technologies and applying them to solve complex challenges. Seeking a challenging Software Engineer role where I can leverage my skills and experience to contribute to the success of a forward-thinking organisation.
+
+**Skills**
+
+*   **Programming Languages:** Python, Java, JavaScript (ES6+), C++, Go
+*   **Frameworks/Libraries:** React, Node.js, Spring Boot, Django, TensorFlow, Pandas, NumPy
+*   **Databases:** PostgreSQL, MySQL, MongoDB, Redis
+*   **Cloud Technologies:** AWS (EC2, S3, Lambda, DynamoDB), Azure
+*   **DevOps:** Docker, Kubernetes, Jenkins, Git, CI/CD pipelines
+*   **Testing:** JUnit, pytest, Jest, Selenium, Cypress
+*   **Methodologies:** Agile (Scrum, Kanban), Test-Driven Development (TDD)
+*   **Operating Systems:** Linux, Windows, macOS
+*   **Other:** Data Structures & Algorithms, Object-Oriented Programming (OOP), RESTful APIs, Version Control
+
+**Experience**
+
+**Software Engineer** | **Aether Dynamics Ltd.** | Belfast | June 2021 – Present
+
+*   Led the development of a new feature for the company's flagship SaaS product, resulting in a 20% increase in user engagement. The feature was built using React, Node.js, and PostgreSQL.
+*   Designed and implemented a microservices architecture for processing large datasets, improving data processing speed by 40%.  Technologies included: Python, Docker, Kubernetes, AWS Lambda.
+*   Collaborated with a team of engineers to build and maintain CI/CD pipelines using Jenkins, ensuring automated testing and deployment of code changes.
+*   Contributed to the development of a comprehensive testing suite, reducing the number of production bugs by 15%. Utilized JUnit and Selenium.
+*   Mentored junior engineers on best practices in software development and code quality.
+
+**Junior Software Developer** | **Innovate Solutions Group** | Belfast | July 2020 – June 2021
+
+*   Developed and maintained RESTful APIs using Spring Boot and Java.
+*   Contributed to the development of a data analytics dashboard using React and D3.js.
+*   Worked closely with the QA team to identify and resolve software defects.
+*   Participated in daily stand-up meetings and sprint planning sessions within an Agile Scrum environment.
+
+**Education**
+
+**University of Ulster, Coleraine** | Coleraine | BSc (Hons) Computer Science | 2017 – 2020
+
+*   **Dissertation:** "Optimizing Machine Learning Algorithms for Fraud Detection using Python and TensorFlow." Achieved First Class Honours.
+*   **Relevant Modules:** Data Structures and Algorithms, Database Systems, Software Engineering, Artificial Intelligence, Computer Networks, Operating Systems.
+*   **Awards:** Dean's List (2018, 2019, 2020)
+
+**Royal Belfast Academical Institution** | Belfast | A-Levels | 2015 – 2017
+
+*   Mathematics: A
+*   Physics: A
+*   Computer Science: A
+*   Further Mathematics: B
+
+**Projects**
+
+**Personal Portfolio Website** | [Link to GitHub Repository (if applicable)]
+
+*   Developed a personal portfolio website using React, showcasing my skills and projects.
+*   Implemented responsive design principles to ensure optimal viewing experience across different devices.
+
+**Machine Learning Model for Image Classification** | [Link to GitHub Repository (if applicable)]
+
+*   Built a machine learning model for image classification using Python and TensorFlow.
+*   Trained the model on a large dataset and achieved a high level of accuracy.
+
+**Awards & Recognition**
+
+*   University of Ulster Computing Society Hackathon Winner (2019)
+*   Dean's List, University of Ulster (2018, 2019, 2020)
+
+**References**
+
+Available upon request.

@@ -1,0 +1,63 @@
+**Christopher Morales**
+NN1 1EX | 07700 900821 | christopher.morales@email.com
+
+**Summary**
+
+A highly motivated and results-oriented Software Engineer with 3+ years of experience in developing and maintaining high-performance web applications and distributed systems. Proven ability to work independently and collaboratively within agile environments to deliver innovative solutions that meet and exceed client expectations. Passionate about staying up-to-date with the latest technologies and applying them to solve complex problems. Seeking a challenging and rewarding Software Engineer role where I can contribute to the growth and success of a dynamic organisation.
+
+**Skills**
+
+*   **Languages:** Java (Expert), Python (Proficient), JavaScript (Proficient), C++ (Familiar), SQL
+*   **Frameworks/Libraries:** Spring Boot, React, Angular, Node.js, JUnit, Mockito, REST APIs, gRPC
+*   **Databases:** MySQL, PostgreSQL, MongoDB, Redis
+*   **Cloud:** AWS (EC2, S3, Lambda, DynamoDB), Azure (Basic Familiarity)
+*   **Tools:** Git, Docker, Kubernetes, Jenkins, Maven, Gradle, IntelliJ IDEA, VS Code
+*   **Methodologies:** Agile (Scrum, Kanban), TDD, CI/CD
+*   **Operating Systems:** Linux, Windows, macOS
+
+**Experience**
+
+**Software Engineer** | **Quantum Leap Technologies Ltd.** | Northampton | June 2021 – Present
+
+*   Led the development of a new microservice architecture for the company's core e-commerce platform, resulting in a 30% reduction in server response time and a 20% increase in transaction throughput.
+*   Designed and implemented RESTful APIs using Spring Boot and Java, ensuring scalability and maintainability.
+*   Developed and maintained automated CI/CD pipelines using Jenkins and Docker, significantly improving deployment frequency and reducing errors.
+*   Collaborated with front-end developers to integrate APIs with React-based user interfaces.
+*   Wrote comprehensive unit and integration tests using JUnit and Mockito, ensuring high code quality and reliability.
+*   Mentored junior developers and provided technical guidance on best practices.
+*   Implemented secure authentication and authorization mechanisms using OAuth 2.0.
+*   Actively participated in daily stand-up meetings, sprint planning, and retrospectives.
+
+**Junior Software Developer** | **Stellar Solutions UK** | Milton Keynes | July 2020 – June 2021
+
+*   Contributed to the development of a data analytics platform using Python and Django.
+*   Assisted in the design and implementation of database schemas using PostgreSQL.
+*   Developed and maintained unit tests to ensure code quality.
+*   Participated in code reviews and provided constructive feedback to other team members.
+*   Gained experience in working within an agile development environment.
+*   Helped improve existing code base functionality and performance.
+
+**Education**
+
+**University of Essex** | Colchester | September 2017 – June 2020
+
+*   Bachelor of Science (Hons) in Computer Science | 2:1
+
+**Duston School** | Northampton | September 2010 – June 2017
+
+*   A-Levels: Mathematics (A), Physics (B), Computer Science (B)
+*   GCSEs: 9 GCSEs including Mathematics (A*), English (A) and Science (A)
+
+**Projects**
+
+*   **Personal Portfolio Website:** Developed a responsive portfolio website using React and Node.js to showcase my skills and projects. (GitHub: [Link - If Applicable])
+*   **Machine Learning Algorithm:** Implemented a machine learning algorithm for image recognition using Python and TensorFlow. (GitHub: [Link - If Applicable])
+
+**Awards & Certifications**
+
+*   AWS Certified Cloud Practitioner (Desired)
+*   Dean's List, University of Essex (2018, 2019)
+
+**References**
+
+Available upon request.

@@ -1,0 +1,49 @@
+**Douglas Sanders**
+S20 4UA | 07700 900456 | douglas.sanders@email.com
+
+**Summary**
+
+A recent graduate with some experience in software development, seeking a Software Engineer role. Eager to apply learned skills and contribute to a team. Possesses a basic understanding of Java and Python, with some familiarity with web development principles.
+
+**Education**
+
+*   **University of Lincoln** Lincoln, UK
+    *   BSc (Hons) Computer Science | September 2019 – June 2022
+    *   Grade: 2:2
+    *   Relevant Coursework: Data Structures and Algorithms, Object-Oriented Programming, Database Management.
+
+*   **Hope Valley College** Hope Valley, UK
+    *   A-Levels: Mathematics (C), Physics (D), Computer Science (E) | September 2017 – June 2019
+    *   GCSEs: 9 GCSEs including Maths (B) and English (C) | September 2015 – June 2017
+
+**Experience**
+
+*   **Junior Developer (Intern)** | TechSolutions Ltd | Sheffield, UK | June 2021 – August 2021
+    *   Assisted senior developers in maintaining existing software systems.
+    *   Wrote and tested basic code modules in Java.
+    *   Contributed to documentation.
+    *   Helped with bug fixes.
+
+*   **IT Support Assistant (Part-time)** | City Computers | Sheffield, UK | September 2020 – May 2021
+    *   Provided basic IT support to customers, resolving hardware and software issues.
+    *   Assisted with computer setup and maintenance.
+    *   Troubleshooting of network and printer problems.
+
+**Skills**
+
+*   **Programming Languages:** Java (Beginner), Python (Beginner), HTML (Basic), CSS (Basic), JavaScript (Basic)
+*   **Databases:** MySQL (Basic)
+*   **Operating Systems:** Windows, Linux (Familiar)
+*   **Tools:** Git (Basic)
+*   **Other:** Microsoft Office Suite, Basic Networking Knowledge
+
+**Projects**
+
+*   **Simple Calculator Application (Java)**
+    *   Developed a basic calculator application as part of university coursework.
+*   **Personal Website (HTML, CSS, JavaScript)**
+    *   Created a simple personal website to showcase skills.
+
+**Interests**
+
+*   Gaming, reading science fiction, hiking

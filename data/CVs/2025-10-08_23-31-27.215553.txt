@@ -1,0 +1,51 @@
+**Amy Nguyen**
+ML1 2NY | 07700 900123 | amy.nguyen88@email.com
+
+**Summary**
+
+A motivated and enthusiastic graduate with a BSc in Computer Science seeking an entry-level Software Engineer position. Possesses a basic understanding of programming principles and experience with various software development tools. Eager to learn and contribute to a dynamic team.
+
+**Education**
+
+*   **University of Bedfordshire**, Luton
+    *   BSc (Hons) Computer Science, 2:2
+    *   September 2019 – June 2022
+    *   Relevant Modules: Introduction to Programming, Data Structures and Algorithms, Database Systems, Software Engineering Principles.
+
+*   **Coltness High School**, Wishaw
+    *   Higher Grades: Maths (C), Computing (B), English (C)
+    *   National 5 Grades: All passed.
+    *   September 2013 – June 2019
+
+**Experience**
+
+*   **IT Support Assistant**, Tech Solutions Ltd, Motherwell
+    *   July 2022 – Present (Part-time)
+    *   Provided basic IT support to employees, including troubleshooting hardware and software issues.
+    *   Assisted with the maintenance of computer systems and networks.
+    *   Logged support requests and tracked progress.
+
+*   **Shop Assistant**, Retail Ready, Wishaw
+    *   June 2018 – August 2018 (Summer Job)
+    *   Assisted customers with purchases and inquiries.
+    *   Maintained a clean and organized work environment.
+    *   Processed payments and handled cash transactions.
+
+**Skills**
+
+*   **Programming Languages:** Java (Basic), Python (Basic), C++ (Basic)
+*   **Databases:** MySQL (Basic)
+*   **Operating Systems:** Windows, Linux (Familiar)
+*   **Software:** Microsoft Office Suite
+*   **Other:** Problem-solving, Teamwork, Communication
+
+**Projects**
+
+*   **University Project: Simple Inventory Management System (Java)**
+    *   Developed a basic inventory management system using Java and MySQL.
+    *   Implemented features such as adding, deleting, and updating inventory items.
+    *   Worked in a small team to complete the project.
+
+**References**
+
+Available upon request.

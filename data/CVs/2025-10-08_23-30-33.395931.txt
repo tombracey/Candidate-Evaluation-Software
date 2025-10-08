@@ -1,0 +1,43 @@
+**Jeffrey Greer**
+DE11 0NL | 07700 900123 | jeffrey.greer@email.com
+
+**Summary**
+
+A motivated and enthusiastic individual with some experience in software development, seeking an entry-level Software Engineer role. Eager to learn and contribute to a dynamic team. Limited practical experience but a willingness to improve skills.
+
+**Education**
+
+*   **Grantham College**, Grantham, Lincolnshire
+    *   A-Levels: Mathematics (C), Physics (D), Computer Science (E) (2018-2020)
+*   **St. Wulfram's School**, Grantham, Lincolnshire
+    *   GCSEs: 7 GCSEs including Mathematics (B) and English (C) (2013-2018)
+
+**Experience**
+
+*   **IT Support Intern, Dynatech Solutions**, Grantham (Summer 2021)
+    *   Provided basic IT support to staff, including troubleshooting hardware and software issues.
+    *   Assisted with the setup of new computers and peripherals.
+    *   Maintained accurate records of IT equipment.
+
+*   **Warehouse Operative, FastPack Logistics**, Grantham (Part-time, 2020-2021)
+    *   Picked and packed orders for dispatch.
+    *   Maintained a clean and organized work environment.
+    *   Adhered to health and safety regulations.
+
+**Skills**
+
+*   **Programming Languages:** Basic knowledge of Python and Java.
+*   **Operating Systems:** Familiar with Windows and Linux.
+*   **Software:** Microsoft Office Suite.
+*   **Other:** Problem-solving, teamwork, communication skills.
+
+**Projects**
+
+*   **Simple Text-Based Adventure Game (Python)**
+    *   Developed a basic text-based adventure game as part of a college project. (Personal Project)
+*   **Basic Website Using HTML, CSS, and JavaScript**
+    *   Created a simple website for a fictional business. (College Project)
+
+**References**
+
+Available upon request.

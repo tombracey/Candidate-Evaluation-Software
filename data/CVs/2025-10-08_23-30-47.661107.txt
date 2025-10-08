@@ -1,0 +1,58 @@
+**Mary Drake**
+PR7 6HE | 07700 900123 | mary.drake@email.com
+
+**Summary**
+
+Highly motivated and results-oriented Software Engineer with 3+ years of experience in designing, developing, and implementing scalable and efficient software solutions. Proven ability to collaborate effectively within agile teams, contributing to all phases of the software development lifecycle. Passionate about staying up-to-date with the latest technologies and applying them to solve complex challenges. Seeking a challenging Software Engineer role where I can leverage my skills and experience to contribute to a dynamic and innovative team.
+
+**Skills**
+
+*   **Programming Languages:** Python (Expert), Java (Proficient), JavaScript (Intermediate), C++ (Basic)
+*   **Frameworks/Libraries:** React, Node.js, Spring Boot, Django, TensorFlow, PyTorch
+*   **Databases:** SQL (MySQL, PostgreSQL), NoSQL (MongoDB, Cassandra)
+*   **Cloud Technologies:** AWS (EC2, S3, Lambda), Azure (Basic)
+*   **DevOps:** Docker, Kubernetes, CI/CD (Jenkins, GitLab CI), Terraform (Basic)
+*   **Testing:** Unit Testing (JUnit, pytest), Integration Testing, End-to-End Testing (Selenium)
+*   **Agile Methodologies:** Scrum, Kanban
+*   **Operating Systems:** Linux, Windows, macOS
+*   **Version Control:** Git (GitHub, GitLab, Bitbucket)
+*   **Other:** Data Structures & Algorithms, Object-Oriented Programming, Design Patterns
+
+**Experience**
+
+**Software Engineer, Innovate Solutions Ltd, Manchester** (June 2021 – Present)
+
+*   Developed and maintained RESTful APIs using Python (Django) and Spring Boot for a high-traffic e-commerce platform, resulting in a 20% improvement in API response time.
+*   Led the design and implementation of a microservice architecture using Docker and Kubernetes, improving scalability and resilience of the platform.
+*   Contributed to the development of a machine learning model using TensorFlow for product recommendation, increasing click-through rates by 15%.
+*   Participated in daily Scrum meetings, sprint planning, and code reviews, fostering a collaborative and efficient team environment.
+*   Implemented robust unit and integration tests, ensuring high code quality and minimizing defects.
+
+**Junior Software Developer, Agile Tech Solutions, Preston** (September 2020 – June 2021)
+
+*   Assisted senior developers in the development of web applications using React and Node.js.
+*   Contributed to the development of a new user interface for a customer relationship management (CRM) system.
+*   Wrote SQL queries to retrieve and manipulate data from relational databases.
+*   Participated in code reviews and testing activities.
+*   Gained experience in Agile software development methodologies.
+
+**Education**
+
+**Runshaw College, Leyland** (September 2016 – June 2020)
+
+*   A-Levels: Mathematics (A), Computer Science (A), Physics (B)
+
+**Projects**
+
+*   **Personal Portfolio Website:** Developed a personal portfolio website using React to showcase my skills and projects. (GitHub: github.com/example/portfolio)
+*   **Data Analysis Project:** Performed data analysis using Python (Pandas, NumPy) to identify trends and patterns in a large dataset. (GitHub: github.com/example/data-analysis)
+*   **Machine Learning Project:** Built a machine learning model to predict customer churn using Python (Scikit-learn). (GitHub: github.com/example/churn-prediction)
+
+**Awards & Recognition**
+
+*   Innovate Solutions Ltd – Employee of the Month (December 2022) - Recognised for outstanding contribution to the e-commerce platform project.
+*   Runshaw College - Award for Excellence in Computer Science (June 2020)
+
+**References**
+
+Available upon request.

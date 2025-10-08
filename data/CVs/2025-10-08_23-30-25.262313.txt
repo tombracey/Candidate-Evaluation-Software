@@ -1,0 +1,62 @@
+**Gail Ball**
+W1V 0AH | 07700 900 456 | gail.ball@emaildomain.co.uk
+
+**Summary**
+
+A highly motivated and results-oriented Software Engineer with 5+ years of experience in designing, developing, and deploying scalable and robust software solutions. Proven ability to work independently and collaboratively within Agile development teams, contributing to all stages of the software development lifecycle. Expertise in Java, Python, and cloud technologies, with a strong focus on writing clean, maintainable, and well-documented code. Passionate about staying current with the latest technologies and applying them to solve complex business problems. Seeking a challenging Software Engineer role where I can contribute to innovative projects and continue to grow my technical skills.
+
+**Skills**
+
+*   **Programming Languages:** Java (Proficient), Python (Proficient), JavaScript, C++
+*   **Frameworks & Libraries:** Spring Boot, Django, React, Node.js, JUnit, Mockito
+*   **Databases:** MySQL, PostgreSQL, MongoDB, Redis
+*   **Cloud Technologies:** AWS (EC2, S3, Lambda, RDS), Azure, Docker, Kubernetes
+*   **DevOps:** CI/CD (Jenkins, GitLab CI), Terraform, Ansible
+*   **Agile Methodologies:** Scrum, Kanban
+*   **Version Control:** Git (GitHub, GitLab, Bitbucket)
+*   **Operating Systems:** Linux, Windows, macOS
+*   **Testing:** Unit Testing, Integration Testing, End-to-End Testing
+
+**Experience**
+
+**Software Engineer, Cognito Dynamics Ltd., London** | June 2019 – Present
+
+*   Led the development and deployment of a new microservice architecture for a key business application, resulting in a 30% reduction in response time and a 20% increase in scalability.
+*   Designed and implemented RESTful APIs using Spring Boot and Java, adhering to industry best practices and ensuring high performance and security.
+*   Developed and maintained CI/CD pipelines using Jenkins and GitLab CI, automating the build, test, and deployment processes.
+*   Contributed to the migration of existing infrastructure to AWS cloud, utilising services like EC2, S3, and RDS.
+*   Collaborated with product managers and other stakeholders to gather requirements, define specifications, and deliver high-quality software solutions.
+*   Mentored junior engineers, providing guidance and support on technical challenges and best practices.
+*   Proactively identified and resolved performance bottlenecks, security vulnerabilities, and other technical issues.
+*   Wrote comprehensive unit and integration tests to ensure code quality and prevent regressions.
+
+**Junior Software Developer, Apex Innovations Group, Manchester** | July 2017 – May 2019
+
+*   Developed and maintained web applications using Python, Django, and JavaScript.
+*   Contributed to the design and implementation of database schemas using MySQL and PostgreSQL.
+*   Worked closely with senior developers to learn and apply software engineering best practices.
+*   Participated in code reviews and provided constructive feedback to improve code quality.
+*   Assisted in the deployment of applications to production environments.
+*   Troubleshooting and debugging production issues.
+*   Gained experience in Agile development methodologies.
+
+**Education**
+
+**Lancaster Girls' Grammar School, Lancaster** | September 2009 – June 2016
+
+*   A-Levels: Mathematics (A*), Physics (A), Computer Science (B)
+*   GCSEs: 10 A* - C, including Mathematics and English
+
+**Projects**
+
+*   **Personal Portfolio Website:** Developed a responsive personal portfolio website using React and Node.js to showcase skills and projects. (GitHub Repository: [Provide a fake GitHub link here e.g., github.com/GailBall/portfolio])
+*   **Machine Learning Project:** Implemented a machine learning model to predict customer churn using Python and scikit-learn. (GitHub Repository: [Provide a fake GitHub link here e.g., github.com/GailBall/churn_prediction])
+
+**Awards & Recognition**
+
+*   Employee of the Month, Cognito Dynamics Ltd., March 2022
+*   Team Excellence Award, Cognito Dynamics Ltd., December 2021
+
+**References**
+
+Available upon request.
