@@ -6,10 +6,19 @@ let mainWindow;
 let backendProcess;
 
 app.on("ready", () => {
-  // Start backend:
-  const backendPath = path.join(process.resourcesPath, "dist/backend");
+  // Deterine environment:
+  const isDev = !app.isPackaged || process.env.NODE_ENV === "development";
 
+  // Set backend path accordingly:
+  const backendPath = isDev
+    ? path.join(__dirname, "../dist/backend") // Development path
+    : path.join(process.resourcesPath, "dist/backend"); // Packaged path
+
+  // Start backend:
+  console.log(`Running in ${isDev ? "development" : "production"} mode`);
   console.log("Starting backend from:", backendPath);
+  console.log("Starting backend from:", backendPath);
+
   backendProcess = spawn(backendPath);
 
   backendProcess.stdout.on("data", (data) => {
