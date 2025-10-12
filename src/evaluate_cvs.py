@@ -111,6 +111,8 @@ async def evaluate_all_CVs(pool: list, role: str, location=True, description: st
             all_results.append(result)
 
     results_df = pd.concat(all_results, ignore_index=True)
+    results_df["Experience"] = results_df["Experience"].fillna(0)
+    results_df["Qualifications"] = results_df["Qualifications"].fillna(0)
     results_df["Overall Suitability"] = ((results_df["Experience"] + results_df["Qualifications"]) / 2).round(0).astype(int)
 
     if cv_employer_address:
